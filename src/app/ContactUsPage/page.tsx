@@ -3,8 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import aboutImage from "cta-banner.png";
-import contact from "cta-banner.png";
+import contact from "@/assets/contact-1.png";
 import ArrowIcon from "@/assets/arrow-right.svg";
 
 const ContactUsPage = () => {
@@ -18,18 +17,18 @@ const ContactUsPage = () => {
                 Contact Us
               </h1>
               <p className="text-xl text-[#010D3E] tracking-tight mt-6">
-              Have a question? Fill out the form below, and we will get back to you as soon as possible! Our team is here to assist you with any inquiries or concerns you may have. Whether you need information about our services or expert guidance, we are just a message away.
+                Have a question? Fill out the form below, and we will get back to you as soon as possible! Our team is here to assist you with any inquiries or concerns you may have. Whether you need information about our services or expert guidance, we are just a message away.
               </p>
               <div className="flex gap-1 items-center mt-[30px]">
-              <a href="/#"><button className="btn btn-primary"> Shop Now </button></a>
-              <button className="btn btn-text gap-1">
-                <Link href="/#service"><span>Our Services</span></Link>
-                <ArrowIcon className="h-5 w-5"></ArrowIcon>
-              </button>
-            </div>
+                <a href="/#"><button className="btn btn-primary"> Shop Now </button></a>
+                <button className="btn btn-text gap-1">
+                  <Link href="/#service"><span>Our Services</span></Link>
+                  <img src={ArrowIcon} alt="Arrow Right" className="h-5 w-5" />
+                </button>
+              </div>
 
             </div>
-            
+
             <div className="mt-20 md:mt-0 md:h-[800px] md:flex-1 relative md:left-10 top-10">
               <Image
                 src={contact}
@@ -44,10 +43,10 @@ const ContactUsPage = () => {
         </div>
       </section>
 
-      
 
-{/* Inquiry Form */}
-<section id="inquiryform" className="py-12 bg-gradient-to-t from-[#b4d1f7] to-[#FFFFFF] flex justify-center items-center">
+
+      {/* Inquiry Form */}
+      <section id="inquiryform" className="py-12 bg-gradient-to-t from-[#b4d1f7] to-[#FFFFFF] flex justify-center items-center">
         <div className="container max-w-[800px] mx-auto px-6 bg-white shadow-xl rounded-xl p-10 border-gray-1000">
           <h2 className="text-center text-4xl md:text-6xl font-extrabold tracking-tight bg-gradient-to-b from-black to-[#001E80] text-transparent bg-clip-text">
             Inquiry Form
@@ -66,9 +65,9 @@ const ContactUsPage = () => {
               className="p-4 border border-gray-300 rounded-lg w-full h-40 focus:outline-none focus:ring-4 focus:ring-blue-500 shadow-sm transition duration-200"
             ></textarea>
             <div className="flex justify-center">
-            <button type="submit" className="w-full md:w-auto px-8 py-3 bg-gradient-to-r from-blue-500 to-blue-700 text-white font-semibold rounded-lg shadow-lg hover:opacity-90 transition duration-300">
-              Submit
-            </button>
+              <button type="submit" className="w-full md:w-auto px-8 py-3 bg-gradient-to-r from-blue-500 to-blue-700 text-white font-semibold rounded-lg shadow-lg hover:opacity-90 transition duration-300">
+                Submit
+              </button>
             </div>
           </form>
         </div>
@@ -96,13 +95,13 @@ const ContactUsPage = () => {
           <div className="md:flex items-start">
             <div className="md:w-1/2">
               <h2 className="text-3xl md:text-4xl font-bold tracking-tighter text-black mb-4">
-              GurOm Dental
+                GurOm Dental
               </h2>
               <p className="text-lg text-gray-700 mb-2">
-              Visit us at our main office on JM Road, <br></br>  Shivajinagar, Pune - 411045
+                Visit us at our main office on JM Road, <br></br>  Shivajinagar, Pune - 411045
               </p>
               <p className="text-lg text-gray-700 mb-2">
-                Contact No: +91 12345 67890 
+                Contact No: +91 12345 67890
               </p>
               <p className="text-lg text-gray-700 mb-2">
                 Email: <a href="mailto:sketchitup.official@gmail.com" className="text-blue-500">info@guromdental.com </a>

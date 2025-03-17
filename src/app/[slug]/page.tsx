@@ -56,6 +56,15 @@ function SinglePage() {
             Vero cumque accusamus repudiandae!
           </p>
         </div>
+        <div className="text-sm">
+          <h4 className="font-medium mb-4">Title</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
+            nam culpa iusto officiis asperiores in labore non distinctio,
+            voluptatum corrupti obcaecati minus fugit porro. Explicabo, commodi?
+            Vero cumque accusamus repudiandae!
+          </p>
+        </div>
       </div>
     </div>
   );
