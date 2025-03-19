@@ -5,6 +5,8 @@ import Link from "next/link";
 import Image from "next/image";
 import contact from "@/assets/contact-1.png";
 import ArrowIcon from "@/assets/arrow-right.svg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 const ContactUsPage = () => {
   return (
@@ -21,9 +23,10 @@ const ContactUsPage = () => {
               </p>
               <div className="flex gap-1 items-center mt-[30px]">
                 <a href="/#"><button className="btn btn-primary"> Shop Now </button></a>
-                <button className="btn btn-text gap-1">
+                <button className="btn btn-text gap-2 font-semibold">
                   <Link href="/#service"><span>Our Services</span></Link>
-                  <img src={ArrowIcon} alt="Arrow Right" className="h-5 w-5" />
+                  {/* <img src={ArrowIcon} alt="Arrow Right" className="h-5 w-5" /> */}
+                  <FontAwesomeIcon icon={faArrowRight} />
                 </button>
               </div>
 
@@ -74,7 +77,7 @@ const ContactUsPage = () => {
       </section>
 
       {/* Support Section */}
-      <section className="py-20 bg-gradient-to-b from-[#FFFFFF] to-[#d5eaf2]">
+      {/* <section className="py-20 bg-gradient-to-b from-[#FFFFFF] to-[#d5eaf2]">
         <div className="container max-w-[800px] mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-6xl font-bold tracking-tighter bg-gradient-to-b from-black to-[#001E80] text-transparent bg-clip-text">
             Support Section
@@ -87,7 +90,7 @@ const ContactUsPage = () => {
             .
           </p>
         </div>
-      </section>
+      </section> */}
 
       {/* Contact Information */}
       <section className="py-16 bg-white">

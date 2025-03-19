@@ -1,62 +1,35 @@
 "use client"
 
-import { url } from "inspector"
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import Image1 from "@/components/cta-banner.png";
+import img1 from "@/assets/banner_2.jpg";
+import img2 from "@/assets/banner_3.jpg";
+import img3 from "@/assets/banner_6.jpg";
 
-
-
-// const slides=[
-//     {
-//         id:1,
-//         title:'Title 1',
-//         description:'Description 1',
-//         image:Image1,
-//         url: "/",
-//         bg: "bg-gradient-to-r from-yellow-50 to-pink-50"
-//     },
-//     {
-//         id:2,
-//         title:'Title 2',
-//         description:'Description 2',
-//         image:Image1,
-//         url: "/",
-//         bg: "bg-gradient-to-r from-pink-50 to-blue-50"
-//     },
-//     {
-//         id:3,
-//         title:'Title 3',
-//         description:'Description 3',
-//         image:Image1,
-//         url: "/",
-//         bg: "bg-gradient-to-r from-blue-50 to-yellow-50"
-//     }
-// ]
-
+// Local image sources
 const slides = [
     {
         id: 1,
-        title: "Summer Sale Collections",
-        description: "Sale! Up to 50% off!",
-        img: "https://images.pexels.com/photos/1926769/pexels-photo-1926769.jpeg?auto=compress&cs=tinysrgb&w=800",
+        title: "Precision Dental Tools",
+        description: "Advanced care for a healthier smile!",
+        img: img1, // Local image
         url: "/",
         bg: "bg-gradient-to-r from-yellow-50 to-pink-50",
     },
     {
         id: 2,
-        title: "Winter Sale Collections",
-        description: "Sale! Up to 50% off!",
-        img: "https://images.pexels.com/photos/1021693/pexels-photo-1021693.jpeg?auto=compress&cs=tinysrgb&w=800",
+        title: "High-Precision Dental Handpieces",
+        description: "Smooth, precise, and reliable for every procedure!",
+        img: img2, // Local image
         url: "/",
         bg: "bg-gradient-to-r from-pink-50 to-blue-50",
     },
     {
         id: 3,
-        title: "Spring Sale Collections",
-        description: "Sale! Up to 50% off!",
-        img: "https://images.pexels.com/photos/1183266/pexels-photo-1183266.jpeg?auto=compress&cs=tinysrgb&w=800",
+        title: "Orthodontic Instruments",
+        description: "Sterilized. Reliable. Ready for Every Dental Procedure!",
+        img: img3, // Local image
         url: "/",
         bg: "bg-gradient-to-r from-blue-50 to-yellow-50",
     },
@@ -66,15 +39,15 @@ const Slider = () => {
     const [current, setCurrent] = useState(0);
 
     useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrent((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
-    }, 3000);
+        const interval = setInterval(() => {
+            setCurrent((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
+        }, 5000);
 
-    return () => clearInterval(interval);
-  }, []);
+        return () => clearInterval(interval);
+    }, []);
 
     return (
-        <div className='h-[calc(100vh-80px)] overflow-hidden'>
+        <div className="h-[calc(100vh-80px)] overflow-hidden">
             <div
                 className="w-max h-full flex transition-all ease-in-out duration-1000"
                 style={{ transform: `translateX(-${current * 100}vw)` }}
@@ -102,9 +75,9 @@ const Slider = () => {
                         <div className="h-1/2 xl:w-1/2 xl:h-full relative">
                             <Image
                                 src={slide.img}
-                                alt=""
+                                alt={slide.title}
                                 fill
-                                sizes="100%"
+                                sizes="60%"
                                 className="object-cover"
                             />
                         </div>
@@ -127,7 +100,7 @@ const Slider = () => {
                 ))}
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default Slider
+export default Slider;

@@ -34,7 +34,7 @@ const AboutUsPage = () => {
               </p>
               {/* CTA BUTTONS */}
               <div className="flex gap-4 mt-6">
-                <Link href="/#services">
+                <Link href="/ServicesPage">
                   <button className="px-6 py-3 text-lg font-semibold text-white bg-blue-600 rounded-lg shadow-md hover:bg-blue-700 transition duration-300">
                     Learn More About Our Services
                   </button>
