@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import img1 from "@/assets/Airoter_Product_1.jpg"
 
 function CartModal() {
   const cartItems = true;
@@ -14,7 +15,7 @@ function CartModal() {
         <div className="flex flex-col gap-8"> 
             {/* Item  */}
             <div className="flex gap-4">
-            <Image src="/woman.png" width={72} height={96} alt="cart" />
+            <Image src={img1} width={72} height={96} alt="cart" />
             <div className="flex flex-col justify-between w-full">
                 {/* TOP  */}
                 <div className="">
@@ -37,7 +38,7 @@ function CartModal() {
 
             {/* Item  */}
             <div className="flex gap-4">
-            <Image src="/woman.png" width={72} height={96} alt="cart" />
+            <Image src={img1} width={72} height={96} alt="cart" />
             <div className="flex flex-col justify-between w-full">
                 {/* TOP  */}
                 <div className="">
