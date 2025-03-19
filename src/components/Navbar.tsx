@@ -5,6 +5,7 @@ import SearchBar from "./SearchBar";
 import dynamic from "next/dynamic";
 import logo from "@/assets/logo11.png"
 // import NavIcons from "./NavIcons";
+// import NavIcons from "./NavIcons";
 
 const NavIcons = dynamic(() => import("./NavIcons"), { ssr: false });
 
