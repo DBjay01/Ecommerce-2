@@ -35,22 +35,42 @@ const Add = ({
   };
 
   const wixClient = useWixClient();
+  
+console.log("Wix Client:", wixClient);
 
-  const addItem = async() =>{
-    const response = await wixClient.currentCart.addToCurrentCart({
-      lineItems:[
+const addItem = async () => {
+  try {
+    console.log("Adding item to cart:", {
+      lineItems: [
         {
-          catalogReference:{
-            appId:process.env.NEXT_PUBLIC_WIX_APP_ID!,
-            catalogItemId:productId,
+          catalogReference: {
+            appId: process.env.NEXT_PUBLIC_WIX_APP_ID!,
+            catalogItemId: productId,
+            ...(variantId && { options: { variantId } }),
           },
-          quantity: quantity 
-        }
-      ]
-    }   
-    );
+          quantity: quantity,
+        },
+      ],
+    });
 
+    const response = await wixClient.currentCart.addToCurrentCart({
+      lineItems: [
+        {
+          catalogReference: {
+            appId: process.env.NEXT_PUBLIC_WIX_APP_ID!,
+            catalogItemId: productId,
+            ...(variantId && { options: { variantId } }),
+          },
+          quantity: quantity,
+        },
+      ],
+    });
+
+    console.log("Add to cart response:", response);
+  } catch (error) {
+    console.error("Failed to add item to cart:", error);
   }
+};
 
   return (
     <div className="flex flex-col gap-4">
