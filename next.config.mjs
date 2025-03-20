@@ -3,6 +3,7 @@ const nextConfig = {
     images: {
         domains: ["images.pexels.com"],
         domains: ["img.freepik.com"],
+        domains: ["static.wixstatic.com"],
       },
 };
 

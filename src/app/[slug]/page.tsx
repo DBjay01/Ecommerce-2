@@ -1,68 +1,67 @@
 import Add from "@/components/Add";
 import CustomizeProducts from "@/components/CustomizeProducts";
 import ProductImages from "@/components/ProductsImages";
+import { wixClientServer } from "@/lib/wixClientServer";
+import { notFound } from "next/navigation";
 import React from "react";
 
-function SinglePage() {
+const SinglePage = async ({ params }: { params: { slug: string } }) => {
+  console.log(params.slug);
+  const WixClient = await wixClientServer();
+
+  const products = await WixClient.products
+    .queryProducts()
+    .eq("slug", params.slug)
+    // .eq("collectionIds", categoryId)
+    .find();
+
+  if (!products.items[0]) {
+    return notFound();
+  }
+
+  const product = products.items[0];
+
   return (
     <div className="px-4 md:px-8 lg:px-16 xl:32 2xl:px-64 relative flex flex-col lg:flex-row gap-16">
       {/* Img  */}
       <div className="w-full lg:w-1/2 lg:sticky top-20 h-max">
-        <ProductImages />
+        <ProductImages items={product.media?.items} />
       </div>
 
       {/* Text  */}
       <div className="w-full lg:w-1/2 flex flex-col gap-6">
-        <h1 className="text-4xl font-medium">Airoter</h1>
-        <p className="text-gray-500">
-        An Airotor is a high-speed dental handpiece used primarily for cutting, shaping, and polishing teeth during dental procedures. It operates using compressed air, which drives a small turbine to rotate the bur at speeds of up to 400,000 RPM, enabling precise and efficient tooth preparation.
-        </p>
+        <h1 className="text-4xl font-medium">{product.name}</h1>
+        <p className="text-gray-500">{product.description}</p>
         <div className="h-[2px] bg-gray-100" />
-        <div className="flex items-center gap-4">
-          <h2 className="font-medium text-2xl">$50</h2>
-          <h3 className="text-xl text-gray-500 line-through">$59</h3>
-        </div>
+
+        {product.price?.price && product.price?.discountedPrice ? (
+          <h2 className="font-medium text-2xl">₹ {product.price?.price}</h2>
+        ) : (
+          <div className="flex items-center gap-4">
+            <h2 className="font-medium text-2xl">{product.price?.price}</h2>
+            <h3 className="text-xl text-gray-500 line-through">
+              ${product.price?.discountedPrice}
+            </h3>
+          </div>
+        )}
+
         <div className="h-[2px] bg-gray-100" />
-        <CustomizeProducts />
-        <Add />
+        {/* { product.variants && product.productOptions && (<CustomizeProducts
+          productId={product._id}
+          variants={product.variants}
+          productOptions={product.productOptions}
+        />)} */}
+        <Add productId={product._id!} variantId="00000000-0000-0000-0000-000000000000" stockNumber={product.stock?.quantity || 0}/>
         <div className="h-[2px] bg-gray-100" />
-        <div className="text-sm">
-          <h4 className="font-medium mb-4">Key Features</h4>
-          <p>
-          High-Speed Rotation – Ensures smooth and accurate cutting
-          </p>
-          <p>
-          Water Spray System – Prevents overheating and keeps the area clean
-          </p>
-          <p>
-          Ergonomic Design – Provides comfort and control for the dentist
-          </p>
-          <p>
-          Sterilizable – Ensures hygiene and patient safety
-          </p>
-        </div>
-        
-        <div className="text-sm">
-          <h4 className="font-medium mb-4">Title</h4>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
-            nam culpa iusto officiis asperiores in labore non distinctio,
-            voluptatum corrupti obcaecati minus fugit porro. Explicabo, commodi?
-            Vero cumque accusamus repudiandae!
-          </p>
-        </div>
-        <div className="text-sm">
-          <h4 className="font-medium mb-4">Title</h4>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
-            nam culpa iusto officiis asperiores in labore non distinctio,
-            voluptatum corrupti obcaecati minus fugit porro. Explicabo, commodi?
-            Vero cumque accusamus repudiandae!
-          </p>
-        </div>
+        {product.additionalInfoSections?.map((section: any) => (
+          <div className="text-sm" key={section.title}>
+            <h4 className="font-medium mb-4">{section.title}</h4>
+            <p>{section.description}</p>
+          </div>
+        ))}
       </div>
     </div>
   );
-}
+};
 
 export default SinglePage;

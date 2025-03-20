@@ -1,13 +1,26 @@
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 import img1 from "@/assets/Airoter_Product_1.jpg"
+import { useWixClient } from "@/hooks/useWixClient";
+import { currentCart } from "@wix/ecom";
+import { useCartStore } from "@/hooks/useCartStore";
 
 function CartModal() {
-  const cartItems = true;
+    //tempory
+//   const cartItems = true;
+
+  const wixClient = useWixClient();
+  const { cart, getCart } = useCartStore();
+
+    useEffect(()=>{
+        getCart(wixClient);
+    }, [wixClient,getCart]); 
+
+    console.log(cart); 
 
   return (
     <div className="w-max absolute p-4 rounded-md shadow-[0_3px_10px_rgb(0,0,0,0.2)] bg-white top-12 right-0 flex flex-col gap-6 z-20">
-      {!cartItems ? (
+      {!cart ? (
         <div className="text-lg">Your cart is empty</div>
       ) : (
         <>
