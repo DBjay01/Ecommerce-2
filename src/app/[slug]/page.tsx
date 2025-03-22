@@ -51,8 +51,8 @@ const SinglePage = async ({ params }: { params: { slug: string } }) => {
           variants={product.variants}
           productOptions={product.productOptions}
         />)} */}
-        <Add productId={product._id!} variantId="00000000-0000-0000-0000-000000000000" stockNumber={product.stock?.quantity || 0}/>
-        <div className="h-[2px] bg-gray-100" />
+<Add product={product} variantId="00000000-0000-0000-0000-000000000000" stockNumber={product.stock?.quantity || 0} />    
+    <div className="h-[2px] bg-gray-100" />
         {product.additionalInfoSections?.map((section: any) => (
           <div className="text-sm" key={section.title}>
             <h4 className="font-medium mb-4">{section.title}</h4>

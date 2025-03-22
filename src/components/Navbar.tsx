@@ -17,6 +17,7 @@ const Navbar = () => {
         <Link href="/">
           <div className="text-2xl tracking-wide">GurOm</div>
         </Link>
+        
         <Menu />
       </div>
       {/* BIGGER SCREENS */}

@@ -51,20 +51,20 @@ const res = await productQuery.find();
           className="w-full flex flex-col gap-4 sm:w-[45%] lg:w-[22%]"
           key={product._id}
         >
-          <div className="relative w-full h-80">
+          <div className="relative w-full h-64">
             <Image
               src={product.media?.mainMedia?.image?.url || "/product.png"}
               alt=""
               fill
               sizes="25vw"
-              className="absolute object-cover rounded-md z-10 hover:opacity-0 transition-opacity easy duration-500"
+              className="absolute object-contain rounded-md z-10 hover:opacity-0 transition-opacity easy duration-500"
             />
            {product.media?.items && (<Image
               src={product.media?.items[1]?.image?.url || "/product.png"}
               alt=""
               fill
               sizes="25vw"
-              className="absolute object-cover rounded-md"
+              className="absolute object-contain rounded-md"
             />)}
           </div>
 
