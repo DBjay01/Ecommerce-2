@@ -19,6 +19,7 @@ const SinglePage = async ({ params }: { params: { slug: string } }) => {
   }
 
   const product = products.items[0];
+  console.log(product);
 
   return (
     <div className="px-4 md:px-8 lg:px-16 xl:32 2xl:px-64 relative flex flex-col lg:flex-row gap-16">
@@ -38,6 +39,9 @@ const SinglePage = async ({ params }: { params: { slug: string } }) => {
             __html: product.description || "", // Ensure description is a string
           }}
         />
+
+        <div className="h-[2px] bg-gray-100" />
+        <h4 className="text-m font-medium">Company : {product.brand}</h4>
 
         <div className="h-[2px] bg-gray-100" />
 

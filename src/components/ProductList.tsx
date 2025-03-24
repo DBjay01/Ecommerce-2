@@ -72,9 +72,13 @@ const res = await productQuery.find();
             <span className="font-medium">{product.name}</span>
             <span className="font-semibold">₹{product.price?.price}</span>
           </div>
-          <div className="text-sm text-gray-500">
-            Best Seller of this month
+          <div>
+            
+        <h4 className="text-sm"><b>Company</b> : {product.brand}</h4>
           </div>
+          {/* <div className="text-sm text-gray-500">
+            Best Seller of this month
+          </div> */}
           <button className="rounded-2xl ring-1 ring-lama text-lama w-max py-2 px-4 text-xs hover:bg-lama hover:text-white">
             {" "}
             Add To Cart
