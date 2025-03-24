@@ -12,7 +12,7 @@ const Menu = () => {
   };
 
   return (
-    <div className="">
+    <div className="relative z-[1000]"> {/* Ensure the menu container has a high z-index */}
       <Image
         src="/menu.png"
         alt=""
@@ -22,24 +22,24 @@ const Menu = () => {
         onClick={() => setOpen((prev) => !prev)}
       />
       {open && (
-        <div className="absolute bg-black text-white left-0 top-20 w-full h-[calc(100vh-80px)] flex flex-col items-center justify-center gap-8 text-xl z-10">
+        <div className="fixed bg-black text-white left-0 top-20 w-full h-[calc(100vh-80px)] flex flex-col items-center justify-center gap-8 text-xl z-[1100]"> {/* Use a higher z-index */}
           <Link href="/" onClick={handleMenuClick}>
             Homepage
           </Link>
           <Link href="/list" onClick={handleMenuClick}>
             Shop
           </Link>
-          <Link href="/aboutuspage" onClick={handleMenuClick}>
+          <Link href="/ServicesPage" onClick={handleMenuClick}>
+            Our Services
+          </Link>
+          <Link href="/AboutUsPage" onClick={handleMenuClick}>
             About
           </Link>
-          <Link href="/contactuspage" onClick={handleMenuClick}>
+          <Link href="/ContactUsPage" onClick={handleMenuClick}>
             Contact
           </Link>
-          {/* <Link href="/" onClick={handleMenuClick}>
-            Logout
-          </Link> */}
           <Link href="/CheckoutPage" onClick={handleMenuClick}>
-            Cart(1)
+            Cart
           </Link>
         </div>
       )}

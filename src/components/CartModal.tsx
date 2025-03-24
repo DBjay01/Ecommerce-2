@@ -1,13 +1,14 @@
 "use client";
 
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { useWixClient } from "@/hooks/useWixClient";
 import Link from "next/link";
 
 function CartModal({ setIsCartOpen }: { setIsCartOpen: (value: boolean) => void }) {
   const [cart, setCart] = useState<any[]>([]);
   const wixClient = useWixClient();
+  const cartRef = useRef<HTMLDivElement>(null); // Reference for the cart panel
 
   useEffect(() => {
     const fetchCart = async () => {
@@ -58,8 +59,25 @@ function CartModal({ setIsCartOpen }: { setIsCartOpen: (value: boolean) => void 
     }
   };
 
+  // Close cart panel when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (cartRef.current && !cartRef.current.contains(event.target as Node)) {
+        setIsCartOpen(false); // Close the cart panel
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [setIsCartOpen]);
+
   return (
-    <div className="w-max absolute p-4 rounded-md shadow-[0_3px_10px_rgb(0,0,0,0.2)] bg-white top-12 right-0 flex flex-col gap-6 z-20">
+    <div
+      ref={cartRef} // Attach the ref to the cart panel
+      className="w-max absolute p-4 rounded-md shadow-[0_3px_10px_rgb(0,0,0,0.2)] bg-white top-12 right-0 flex flex-col gap-6 z-20"
+    >
       {cart.length === 0 ? (
         <div className="text-lg">Your cart is empty</div>
       ) : (
@@ -116,9 +134,15 @@ function CartModal({ setIsCartOpen }: { setIsCartOpen: (value: boolean) => void 
               Shipping and taxes calculated at checkout.
             </p>
             <div className="flex justify-between text-sm">
-              <button className="rounded-md py-3 px-4 ring-1 ring-gray-300">
-                View Cart
-              </button>
+              <Link href="/CheckoutPage">
+                <button
+                  className="rounded-md py-3 px-4 ring-1 ring-gray-300"
+                  onClick={() => setIsCartOpen(false)} // Close cart panel
+                >
+                  View Cart
+                </button>
+              </Link>
+
               <Link href="/CheckoutPage">
                 <button
                   className="rounded-md py-3 px-4 bg-black text-white"

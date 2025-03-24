@@ -43,7 +43,7 @@ const AboutUsPage = () => {
             </div>
 
             {/* RIGHT IMAGE */}
-            <div className="relative lg:w-[45%] flex justify-center ml-12">
+            <div className="relative lg:w-[45%] flex justify-center ml-12 mt-6">
               <motion.div
                 initial={{ opacity: 0, x: 50 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -204,37 +204,42 @@ const AboutUsPage = () => {
             </section> */}
 
       {/* Company Details and Location */}
-      <section className="py-16 bg-white">
+{/* Company Details and Location */}
+<section className="py-8 md:py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="md:flex items-start">
+            {/* Company Details */}
             <div className="md:w-1/2">
-              <h2 className="text-3xl md:text-4xl font-bold tracking-tighter text-black mb-4">
-              GurOm Dental
+              <h2 className="text-2xl md:text-3xl font-bold tracking-tighter text-black mb-4">
+                GurOm Dental
               </h2>
-              <p className="text-lg text-gray-700 mb-2">
-                Visit us at our main office on JM Road, <br></br> Shivajinagar,
-                Pune - 411045
+              <p className="text-sm md:text-lg text-gray-700 mb-2">
+                A403, Bhairavnath Complex, Pune Saswad Road, Opposite SP
+                Infocity, Bhekrai Nagar, Hadapsar, Pune, Maharashtra 412308,
+                India
               </p>
-              <p className="text-lg text-gray-700 mb-2">
+              <p className="text-sm md:text-lg text-gray-700 mb-2">
                 Contact No: +91 12345 67890
               </p>
-              <p className="text-lg text-gray-700 mb-2">
+              <p className="text-sm md:text-lg text-gray-700 mb-2">
                 Email:{" "}
                 <a
                   href="mailto:sketchitup.official@gmail.com"
                   className="text-blue-500"
                 >
-                  info@guromdental.com{" "}
+                  shopsdental@gmail.com
                 </a>
               </p>
             </div>
+
+            {/* Location Section */}
             <div className="md:w-1/2 mt-8 md:mt-0 md:ml-8">
-              <h2 className="text-3xl md:text-4xl font-bold tracking-tighter text-black mb-4">
+              <h2 className="text-2xl md:text-3xl font-bold tracking-tighter text-black mb-4">
                 Our Location
               </h2>
-              <div className="w-[80%] h-64">
+              <div className="w-full md:w-[80%] h-64 rounded-md">
                 <iframe
-                  src="https://maps.google.com/maps?q=Row%20House%20No.%20D3,%20Ahilyadevi%20society,%20Baner,%20Pune%20-%20411045&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.8575171259367!2d73.94665347450604!3d18.490112070105244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2e9e2ea054583%3A0x27d1e1d4e804f634!2sBhairavnath%20Complex!5e0!3m2!1sen!2sin!4v1742299125969!5m2!1sen!2sin"
                   width="100%"
                   height="100%"
                   frameBorder="0"

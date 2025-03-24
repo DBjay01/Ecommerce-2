@@ -8,7 +8,7 @@ import DentalServicesSection from "@/components/DentalServicesSection";
 
 const ServicesPage = () => {
   return (
-    <div>
+    <div className="pt-6">
 
       <section className="pt-8 -mt-10 pb-20 bg-[radial-gradient(ellipse_200%100%_at_bottom_left,#87CEEB,_#FFFFFF_90%)] overflow-x-clip">
         <div className="container max-w-[1200px] mx-auto px-4">

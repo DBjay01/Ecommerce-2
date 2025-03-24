@@ -58,16 +58,16 @@ function NavIcons() {
   };
 
   return (
-    <div className="flex items-center gap-4 xl:gap-6 relative">
+    <><div className="flex items-center gap-4 xl:gap-6 relative">
       {/* Profile Icon */}
-      <Image
+      <Link href="/CheckoutPage"><Image
         src="/profile.png"
         alt="Profile"
         width={22}
         height={22}
         className="cursor-pointer"
-        onClick={() => setIsProfileOpen((prev) => !prev)}
-      />
+        // onClick={() => setIsProfileOpen((prev) => !prev)}
+      /></Link>
       {isProfileOpen && (
         <div className="absolute p-4 rounded-md top-12 left-0 bg-white text-sm shadow-[0_3px_10px_rgb(0,0,0,0.2)] z-20">
           <Link href="/profile">Profile</Link>
@@ -102,7 +102,7 @@ function NavIcons() {
   )}
 </div>
 {isCartOpen && <CartModal setIsCartOpen={setIsCartOpen} />} {/* Pass setIsCartOpen */}
-    </div>
+    </div></>
   );
 }
 

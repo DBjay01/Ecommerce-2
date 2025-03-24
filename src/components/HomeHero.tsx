@@ -35,7 +35,7 @@ export const HomeHero = () => {
               Your trusted partner in dental solutions. From advanced dental care to premium dental materials and equipment, we are here to bring excellence to your clinic and beyond.
             </p>
             <div className="flex gap-1 items-center mt-[30px]">
-              <a href="/#"><button className="btn btn-primary"> Shop Now </button></a>
+              <a href="/list"><button className="btn btn-primary"> Shop Now </button></a>
               <button className="btn btn-text gap-1">
                 <Link href="/#service"><span>Our Services</span></Link>
                 <ArrowIcon className="h-5 w-5"></ArrowIcon>

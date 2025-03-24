@@ -10,15 +10,14 @@ const Add = ({
   variantId: string;
   stockNumber: number;
 }) => {
-  const [quantity, setQuantity] = useState(1);
+  const [quantity, setQuantity] = useState(1); // Initialize quantity state
   const [showPopup, setShowPopup] = useState(false); // State to control popup visibility
 
   const handleQuantity = (type: "i" | "d") => {
     if (type === "d" && quantity > 1) {
-      setQuantity((prev) => prev - 1);
-    }
-    if (type === "i" && quantity < stockNumber) {
-      setQuantity((prev) => prev + 1);
+      setQuantity((prev) => prev - 1); // Decrease quantity
+    } else if (type === "i" && quantity < 10) {
+      setQuantity((prev) => prev + 1); // Increase quantity (no limit)
     }
   };
 
@@ -66,18 +65,19 @@ const Add = ({
             <button
               className="cursor-pointer text-xl disabled:cursor-not-allowed disabled:opacity-20"
               onClick={() => handleQuantity("d")}
+              disabled={quantity <= 1} // Disable button if quantity is 1
             >
               -
             </button>
             {quantity}
             <button
-              className="cursor-pointer text-xl disabled:cursor-not-allowed disabled:opacity-20"
+              className="cursor-pointer text-xl"
               onClick={() => handleQuantity("i")}
             >
               +
             </button>
           </div>
-          <div className="text-xs">Last {stockNumber} Items Left</div>
+          {/* <div className="text-xs">Last {stockNumber} Items Left</div> */}
         </div>
         <button
           onClick={addItem}
@@ -91,7 +91,9 @@ const Add = ({
       {showPopup && (
         <div className="absolute top-[-50px] right-0 bg-green-500 text-white py-2 px-4 rounded-lg shadow-lg animate-slide-in">
           Product added to cart! <br />
-          <a href="/CheckoutPage" className="underline">Check your cart</a>
+          <a href="/CheckoutPage" className="underline">
+            Check your cart
+          </a>
         </div>
       )}
     </div>
