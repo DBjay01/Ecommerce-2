@@ -45,7 +45,7 @@ export const HomeCallToAction = () => {
                 India
               </p>
               <p className="text-sm md:text-lg text-gray-700 mb-2">
-                Contact No: +91 12345 67890
+                Contact No: +91 90904 14106
               </p>
               <p className="text-sm md:text-lg text-gray-700 mb-2">
                 Email:{" "}

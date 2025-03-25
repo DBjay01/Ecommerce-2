@@ -16,7 +16,7 @@ const Footer = () => {
           Hadapsar, Pune, Maharashtra 412308, India
           </p>
           <span className="font-semibold"> shopsdental@gmail.com</span>
-          <span className="font-semibold">+1 23456 78900</span>
+          <span className="font-semibold">+91 9090414106</span>
           <div className="flex gap-6">
             <Image src="/facebook.png" alt="" width={16} height={16} />
             <Image src="/instagram.png" alt="" width={16} height={16} />
