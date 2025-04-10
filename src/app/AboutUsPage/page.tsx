@@ -205,7 +205,7 @@ const AboutUsPage = () => {
 
       {/* Company Details and Location */}
 {/* Company Details and Location */}
-<section className="py-8 md:py-16 bg-white">
+<section className="py-8 px-12 md:py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="md:flex items-start">
             {/* Company Details */}
@@ -219,7 +219,7 @@ const AboutUsPage = () => {
                 India
               </p>
               <p className="text-sm md:text-lg text-gray-700 mb-2">
-                Contact No: +91 12345 67890
+                Contact No: +91 90904 14106
               </p>
               <p className="text-sm md:text-lg text-gray-700 mb-2">
                 Email:{" "}

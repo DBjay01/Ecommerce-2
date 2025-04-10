@@ -26,33 +26,30 @@ const Footer = () => {
           </div>
         </div>
         {/* CENTER */}
-        <div className="hidden lg:flex justify-between w-1/2">
-          <div className="flex flex-col justify-between">
-            <h1 className="font-medium text-lg">COMPANY</h1>
-            <div className="flex flex-col gap-6">
-              <Link href="">About Us</Link>
-              <Link href="">Contact Us</Link>
-              <Link href="">Blog</Link>
-              <Link href="">All Products</Link>
-              <Link href="">Featured Products</Link>
+        <div className="hidden lg:flex justify-between w-1/2 ">
+          <div className="flex flex-col ">
+            <h1 className="font-medium text-lg pb-10">COMPANY</h1>
+            <div className="flex flex-col gap-6 ">
+              <Link href="/AboutUsPage">About Us</Link>
+              <Link href="/ContactUsPage">Contact Us</Link>
+              <Link href="/list?cat=all-products">All Products</Link>
+              <Link href="/list?cat=featured">Featured Products</Link>
             </div>
           </div>
-          <div className="flex flex-col justify-between">
-            <h1 className="font-medium text-lg">TOP CATEGORIES</h1>
+          <div className="flex flex-col ">
+            <h1 className="font-medium text-lg pb-10">CATEGORIES</h1>
             <div className="flex flex-col gap-6">
-              <Link href="">Endo</Link>
-              <Link href="">General Dentistry</Link>
-              <Link href="">Handpieces & Attachments</Link>
-              <Link href="">Orthodontic Instruments</Link>
-              <Link href="">Other Dental Equipments</Link>
+              <Link href="/list?cat=endo">Endo</Link>
+              <Link href="/list?cat=general-dentistry">General Dentistry</Link>
+              <Link href="/list?cat=prostho">Prostho</Link>
+              <Link href="/list?cat=other-dental-equipment">Other Dental Equipments</Link>
             </div>
           </div>
-          <div className="flex flex-col justify-between">
-            <h1 className="font-medium text-lg">HELP</h1>
+          <div className="flex flex-col ">
+            <h1 className="font-medium text-lg pb-10">HELP</h1>
             <div className="flex flex-col gap-6">
-              <Link href="">Customer Service</Link>
-              <Link href="">My Account</Link>
-              <Link href="">Find a Store</Link>
+              <Link href="/ContactUsPage">Customer Service</Link>
+              <Link href="/AboutUsPage">Find a Store</Link>
               <Link href="/PrivacyPolicyPage">Privacy Policy</Link>
               <Link href="/TermsPage">Terms & Conditions</Link>
             </div>

@@ -47,8 +47,7 @@ const Slider = () => {
     }, []);
 
     return (
-        <div className=" relative h-[60vh] sm:h-[70vh] md:h-[80vh] lg:h-[85vh] 2xl:h-[90vh] overflow-hidden">
-
+        <div className="relative h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[85vh] 2xl:h-[90vh] overflow-hidden">
             <div
                 className="w-max h-full flex transition-all ease-in-out duration-1000"
                 style={{ transform: `translateX(-${current * 100}vw)` }}
@@ -58,7 +57,6 @@ const Slider = () => {
                         className={`${slide.bg} w-screen h-full flex flex-row`}
                         key={slide.id}
                     >
-
                         {/* TEXT CONTAINER */}
                         <div className="w-1/2 h-full flex flex-col items-center justify-center gap-6 text-center p-4">
                             <h2 className="text-sm md:text-xl lg:text-3xl 2xl:text-5xl">{slide.description}</h2>
@@ -69,7 +67,7 @@ const Slider = () => {
                                 </button>
                             </Link>
                         </div>
-
+    
                         {/* IMAGE CONTAINER */}
                         <div className="w-1/2 h-full relative">
                             <Image
@@ -80,15 +78,14 @@ const Slider = () => {
                                 className="object-cover"
                             />
                         </div>
-
                     </div>
                 ))}
             </div>
-
+    
             <div className="absolute left-1/2 bottom-6 -translate-x-1/2 flex gap-3 z-10">
                 {slides.map((slide, index) => (
                     <div
-                        className={`w-3 h-3  rounded-full ring-1 ring-gray-600 cursor-pointer flex items-center justify-center ${current === index ? "scale-150" : ""
+                        className={`w-3 h-3 rounded-full ring-1 ring-gray-600 cursor-pointer flex items-center justify-center ${current === index ? "scale-150" : ""
                             }`}
                         key={slide.id}
                         onClick={() => setCurrent(index)}

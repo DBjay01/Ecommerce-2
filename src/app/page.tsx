@@ -38,7 +38,9 @@ const HomePage = async () => {
       {/* <section id="home">     <HomeHero ></HomeHero>   </section> */}
       <Slider />
       <div className="mt-24 px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64">
-        <h1 className="text-2xl">Featured Products</h1>
+          <h1 className=" flex justify-center text-2xl md:text-5xl font-bold tracking-tighter bg-gradient-to-b from-black to-[#001E80] text-transparent bg-clip-text">
+            Featured Products
+          </h1>
         <Suspense fallback={"loading"}> 
           <ProductList categoryId={process.env.FEATURED_CATEGORY_ID!}
           limit={8} 

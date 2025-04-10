@@ -16,20 +16,19 @@ const ListPage = async ({ searchParams }: { searchParams: any }) => {
   console.log(searchParams);
 
   return (
-    <div className="px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64 relative">
+    <div className="px-4  md:px-8 lg:px-16 xl:px-32 2xl:px-64 relative">
       {/* SearchBar for Mobile */}
-      <div className="block md:hidden mt-4">
+      <div className="block md:hidden py-10 mt-4">
         <SearchBar />
       </div>
 
       {/* Campaign */}
       <div className="bg-pink-50 px-4 flex justify-between items-center h-52 sm:h-64 md:h-72 lg:h-64">
         {/* Text Section */}
-        <div className="w-1/2 flex items-center h-full">
-          <div className="flex flex-col justify-center gap-3 sm:gap-5 md:gap-8">
-            <h1 className="text-base sm:text-xl md:text-2xl lg:text-4xl font-semibold leading-tight sm:leading-[32px] md:leading-[40px] lg:leading-[48px] text-gray-700">
-              Grab up to 50% - 70% off on
-              <br className="hidden sm:block" /> Selected Products
+        <div className="w-1/2 flex h-full">
+          <div className="flex flex-col justify-center items-center gap-3 sm:gap-5 md:gap-8">
+            <h1 className="text-base  sm:text-xl md:text-2xl lg:text-4xl font-semibold leading-tight sm:leading-[32px] md:leading-[40px] lg:leading-[48px] text-gray-700">
+              Grab up to 50% - 70% off on Selected Products
             </h1>
             <button className="rounded-3xl bg-lama text-white py-2 px-4 sm:py-3 sm:px-5 text-xs sm:text-sm w-max">
               Buy Now

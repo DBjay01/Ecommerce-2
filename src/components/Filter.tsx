@@ -29,7 +29,7 @@ const Filter = () => {
           <option value="physical">Physical</option>
           <option value="digital">Digital</option>
         </select> */}
-        <input
+        {/* <input
           type="text"
           name="min"
           placeholder="min price"
@@ -42,7 +42,7 @@ const Filter = () => {
           placeholder="max price"
           className="text-xs rounded-2xl pl-2 w-24 ring-1 ring-gray-400"
           onChange={handleFilterChange}
-        />
+        /> */}
         {/* TODO: Filter Categories */}
         <select
           name="cat"
