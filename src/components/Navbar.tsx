@@ -40,7 +40,7 @@ const Navbar = () => {
             <div className="text-2xl tracking-wide">GurOm</div>
           </Link>
           <div className="hidden xl:flex gap-4">
-            <Link href="/list">Shop</Link>
+            <Link href="/list?cat=all-products">Shop</Link>
             <Link href="/ServicesPage">Our Services</Link>
             <Link href="/AboutUsPage">About</Link>
             <Link href="/ContactUsPage">Contact</Link>
