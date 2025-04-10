@@ -31,20 +31,20 @@ const Footer = () => {
             <h1 className="font-medium text-lg">COMPANY</h1>
             <div className="flex flex-col gap-6">
               <Link href="">About Us</Link>
-              <Link href="">Careers</Link>
-              <Link href="">Affiliates</Link>
-              <Link href="">Blog</Link>
               <Link href="">Contact Us</Link>
+              <Link href="">Blog</Link>
+              <Link href="">All Products</Link>
+              <Link href="">Featured Products</Link>
             </div>
           </div>
           <div className="flex flex-col justify-between">
-            <h1 className="font-medium text-lg">SHOP</h1>
+            <h1 className="font-medium text-lg">TOP CATEGORIES</h1>
             <div className="flex flex-col gap-6">
-              <Link href="">New Arrivals</Link>
-              <Link href="">Accessories</Link>
-              <Link href="">Men</Link>
-              <Link href="">Women</Link>
-              <Link href="">All Products</Link>
+              <Link href="">Endo</Link>
+              <Link href="">General Dentistry</Link>
+              <Link href="">Handpieces & Attachments</Link>
+              <Link href="">Orthodontic Instruments</Link>
+              <Link href="">Other Dental Equipments</Link>
             </div>
           </div>
           <div className="flex flex-col justify-between">

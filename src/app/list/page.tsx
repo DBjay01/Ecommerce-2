@@ -23,20 +23,26 @@ const ListPage = async ({ searchParams }: { searchParams: any }) => {
       </div>
 
       {/* Campaign */}
-      <div className="hidden bg-pink-50 px-4 sm:flex justify-between h-64">
-        <div className="w-2/3 flex flex-col items-center justify-center gap-8">
-          <h1 className="text-4xl font-semibold leading-[48px] text-gray-700">
-            Grab up to 50% - 70% off on
-            <br /> Selected Products
-          </h1>
-          <button className="rounded-3xl bg-lama text-white w-max py-3 px-5 text-sm">
-            Buy Now
-          </button>
+      <div className="bg-pink-50 px-4 flex justify-between items-center h-52 sm:h-64 md:h-72 lg:h-64">
+        {/* Text Section */}
+        <div className="w-1/2 flex items-center h-full">
+          <div className="flex flex-col justify-center gap-3 sm:gap-5 md:gap-8">
+            <h1 className="text-base sm:text-xl md:text-2xl lg:text-4xl font-semibold leading-tight sm:leading-[32px] md:leading-[40px] lg:leading-[48px] text-gray-700">
+              Grab up to 50% - 70% off on
+              <br className="hidden sm:block" /> Selected Products
+            </h1>
+            <button className="rounded-3xl bg-lama text-white py-2 px-4 sm:py-3 sm:px-5 text-xs sm:text-sm w-max">
+              Buy Now
+            </button>
+          </div>
         </div>
-        <div className="relative w-1/3">
-          <Image src={img1} alt="" fill className="object-contain" />
+
+        {/* Image Section */}
+        <div className="relative w-1/2 h-40 sm:h-56 md:h-64 lg:h-full">
+          <Image src={img1} alt="Offer" fill className="object-contain" />
         </div>
       </div>
+
 
       {/* Filter */}
       {/* <Filter /> */}
