@@ -37,25 +37,26 @@ const HomePage = async () => {
     <div className="">
       {/* <section id="home">     <HomeHero ></HomeHero>   </section> */}
       <Slider />
+      
+
+      <div className="mt-24">
+        <Suspense fallback={"loading"}> 
+          <CategoriesList /> 
+        </Suspense>
+      </div>
+
       <div className="mt-24 px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64">
           <h1 className=" flex justify-center text-2xl md:text-5xl font-bold tracking-tighter bg-gradient-to-b from-black to-[#001E80] text-transparent bg-clip-text">
-            Featured Products
+            Shop Now
           </h1>
         <Suspense fallback={"loading"}> 
           <ProductList categoryId={process.env.FEATURED_CATEGORY_ID!}
           limit={8} 
            />
         </Suspense>
-      </div>
 
-      <div className="mt-24">
-        <h1 className="text-2xl px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64 ">Categories</h1>
-        <h5 className="text-s pl-4 px-6 md:px-8 lg:px-16 xl:px-32 2xl:px-64  mb-12" >Swipe right to see more</h5>
-        <Suspense fallback={"loading"}> 
-          <CategoriesList /> 
-        </Suspense>
+        
       </div>
-      
       {/* <Overview/> */}
       <HomeServices/>
       {/* <HomeShop/> */}

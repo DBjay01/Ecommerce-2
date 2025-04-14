@@ -8,7 +8,7 @@ import { WixClientProvider } from "@/context/wixContext";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Gurom",
+  title: "DentalShops",
   description: "E-commerce application ",
 };
 
@@ -37,7 +37,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <WixClientProvider>
           <Navbar />
-          {children}
+          <div className="mt-16">{children}</div> {/* Added mt-16 */}
           <Footer />
         </WixClientProvider>
       </body>
