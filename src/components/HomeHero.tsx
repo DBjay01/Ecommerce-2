@@ -81,7 +81,7 @@ export const HomeHero = () => {
 
       </div>
     </section>
-     <section>
+     {/* <section>
      <div>
         <div className="max-w-[850px] mt-20 mx-auto ">
           <h2 className="text-center  text-3xl font-bold tracking-tighter bg-gradient-to-b from-black to-[#001E80] text-transparent bg-clip-text">
@@ -99,7 +99,7 @@ solutions for dental professionals and patients alike. </p>
           </div>
         </div>
       </div>
-      </section>     
+      </section>      */}
     </div>
   );
 };

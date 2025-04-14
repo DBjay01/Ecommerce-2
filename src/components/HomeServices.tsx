@@ -40,7 +40,7 @@ const HomeServices = () => {
     <section className="py-24 bg-white">
       <div className="max-w-[1200px] mx-auto px-6">
         <div className="section-heading max-w-[850px] text-center mx-auto">
-          <h2 className="section-title text-3xl font-bold text-[#1A3D5D]">Our Dental Services</h2>
+          <h2 className="section-title text-3xl font-bold text-[#1A3D5D]">Our Services</h2>
           <p className="section-description mt-4 text-gray-600">
             Experience top-tier dental care, manufacturing, and trading with GurOm Dental.
           </p>

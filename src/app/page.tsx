@@ -56,9 +56,9 @@ const HomePage = async () => {
         </Suspense>
       </div>
       
-      <Overview/>
+      {/* <Overview/> */}
       <HomeServices/>
-      <HomeShop/>
+      {/* <HomeShop/> */}
       <HomeCallToAction/>
     </div>
   );
