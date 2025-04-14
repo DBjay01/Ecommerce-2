@@ -47,7 +47,8 @@ const ListPage = async ({ searchParams }: { searchParams: any }) => {
       {/* <Filter /> */}
 
       {/* Products */}
-      <h1 className="mt-12 text-xl font-semibold">{cat?.collection?.name}  for you</h1>
+        
+      <h1 className="flex my-10 justify-center text-2xl md:text-4xl font-bold tracking-tighter bg-gradient-to-b from-black to-[#001E80] text-transparent bg-clip-text">{cat?.collection?.name} </h1>
       <Suspense fallback={"loading"}>
         <ProductList
           categoryId={

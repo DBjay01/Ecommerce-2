@@ -67,16 +67,19 @@ const ProductList = async ({
 
             <div className="flex justify-between">
               <span className="font-medium text-sm">{product.name}</span>
-              <span className="font-semibold text-sm">₹{product.price?.price}</span>
+
             </div>
             <div>
               <h4 className="text-xs">
                 <b>Company</b>: {product.brand}
               </h4>
             </div>
-            <button className="rounded-2xl ring-1 ring-lama text-lama w-max py-2 px-4 text-xs hover:bg-lama hover:text-white">
+            <div className="flex justify-between items-center gap-2">
+            <button className="rounded-2xl ring-1 ring-lama text-lama w-max py-2 px-1 md:px-4  text-xs hover:bg-lama hover:text-white">
               Add To Cart
             </button>
+            <span className="font-semibold text-lg">₹{product.price?.price}</span>
+            </div>
           </Link>
         ))}
       </div>

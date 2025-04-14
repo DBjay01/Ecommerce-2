@@ -11,23 +11,11 @@ export const HomeCallToAction = () => {
       <div className="container">
         <div className="section-heading relative items-center text-center">
           <h2 className="section-title text-2xl md:text-4xl font-bold">
-            Get in touch Today
+            Company Details
           </h2>
-          <p className="section-description mt-4 md:mt-6 text-sm md:text-base text-gray-700">
-            Celebrate the joy of accomplishment of the success we will create
-            together with your support
-          </p>
-          <Image
-            src={starImage}
-            alt="Star Image"
-            width={300}
-            className="hidden md:block absolute -left-[350px] -top-[137px]"
-          />
+                    
         </div>
 
-        <div className="flex flex-col md:flex-row gap-4 mt-8 md:mt-10 justify-center">
-          {/* Add any buttons or call-to-action elements here */}
-        </div>
       </div>
 
       {/* Company Details and Location */}

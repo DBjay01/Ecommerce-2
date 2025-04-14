@@ -106,11 +106,11 @@ const Slider = () => {
       <div className="hidden sm:flex bg-blue-100 rounded-xl px-6 py-4 mt-6 mx-10 flex-wrap justify-center gap-6 md:gap-12 text-sm md:text-base font-medium text-gray-800">
         <div className="flex items-center gap-2">
           <Box className="w-5 h-5 text-gray-900" />
-          <span>20,000+ Products</span>
+          <span>200+ Products</span>
         </div>
         <div className="flex items-center gap-2">
           <Star className="w-5 h-5 text-gray-900" />
-          <span>450+ Brands</span>
+          <span>40+ Brands</span>
         </div>
         <div className="flex items-center gap-2">
           <CheckCircle className="w-5 h-5 text-gray-900" />
