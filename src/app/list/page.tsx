@@ -22,11 +22,7 @@ const ListPage = async ({ searchParams }: { searchParams: any }) => {
   console.log(searchParams);
 
   return (
-<<<<<<< HEAD
     <div className="px-4 pt-20 md:px-8 lg:px-16 xl:px-32 2xl:px-64 relative">
-=======
-    <div className="px-4 md:mt-36 md:px-8 lg:px-16 xl:px-32 2xl:px-64 relative">
->>>>>>> fb8c5f9ae4851de41065996db4ba72ea3e8390c6
       {/* SearchBar for Mobile */}
       <div className="block md:hidden py-10 mt-4">
         <SearchBar />
@@ -52,35 +48,37 @@ const ListPage = async ({ searchParams }: { searchParams: any }) => {
         </div>
       </div> */}
 
-      <div className="bg-pink-50 px-4 py-10 sm:py-12 md:py-16 lg:py-20 flex flex-col sm:flex-row justify-around items-center gap-8">
+      <div className="bg-pink-50 px-4 py-4 sm:py-6 flex flex-col sm:flex-row justify-around items-center gap-4 rounded-xl shadow-md">
         {/* Free Shipping */}
         <div className="flex flex-col items-center text-center max-w-xs">
-          <Truck className="w-12 h-12 text-lama mb-3" />
-          <h3 className="text-lg font-semibold text-gray-700">Free Shipping</h3>
-          <p className="text-sm text-gray-500 mt-1">On all orders above ₹999</p>
+          <Truck className="w-6 h-6 text-lama mb-1.5" />
+          <h3 className="text-sm font-semibold text-gray-700">Free Shipping</h3>
+          <p className="text-xs text-gray-500 mt-0.5">On orders above ₹999</p>
         </div>
 
         {/* Doorstep Delivery */}
         <div className="flex flex-col items-center text-center max-w-xs">
-          <Home className="w-12 h-12 text-lama mb-3" />
-          <h3 className="text-lg font-semibold text-gray-700">Doorstep Delivery</h3>
-          <p className="text-sm text-gray-500 mt-1">Fast & secure delivery</p>
+          <Home className="w-6 h-6 text-lama mb-1.5" />
+          <h3 className="text-sm font-semibold text-gray-700">Doorstep Delivery</h3>
+          <p className="text-xs text-gray-500 mt-0.5">Fast & secure delivery</p>
         </div>
 
         {/* Easy Returns */}
         <div className="flex flex-col items-center text-center max-w-xs">
-          <RotateCcw className="w-12 h-12 text-lama mb-3" />
-          <h3 className="text-lg font-semibold text-gray-700">Easy Returns</h3>
-          <p className="text-sm text-gray-500 mt-1">Hassle-free returns</p>
+          <RotateCcw className="w-6 h-6 text-lama mb-1.5" />
+          <h3 className="text-sm font-semibold text-gray-700">Easy Returns</h3>
+          <p className="text-xs text-gray-500 mt-0.5">Hassle-free returns</p>
         </div>
 
         {/* 24/7 Support */}
         <div className="flex flex-col items-center text-center max-w-xs">
-          <Headphones className="w-12 h-12 text-lama mb-3" />
-          <h3 className="text-lg font-semibold text-gray-700">24/7 Support</h3>
-          <p className="text-sm text-gray-500 mt-1">Here whenever you need us</p>
+          <Headphones className="w-6 h-6 text-lama mb-1.5" />
+          <h3 className="text-sm font-semibold text-gray-700">24/7 Support</h3>
+          <p className="text-xs text-gray-500 mt-0.5">Here when you need us</p>
         </div>
       </div>
+
+
 
       {/* Filter */}
       {/* <Filter /> */}
