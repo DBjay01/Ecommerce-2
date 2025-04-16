@@ -53,7 +53,7 @@ const Slider = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
-    }, 20000);
+    }, 2000);
     return () => clearInterval(interval);
   }, []);
 
