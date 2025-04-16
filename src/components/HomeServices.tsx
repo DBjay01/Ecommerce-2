@@ -13,25 +13,25 @@ const services = [
     title: "Dental Clinics",
     image: DentalClinicsImg,
     description: "Advanced care with the latest technology for healthy, beautiful smiles",
-    pageurl: "/dental-clinics",
+    pageurl: "/ServicesPage",
   },
   {
     title: "Dental Equipment Manufacturing",
     image: DentalEquipmentImg,
     description: "Innovative and reliable dental equipment to enhance patient care",
-    pageurl: "/dental-equipment-manufacturing",
+    pageurl: "/ServicesPage",
   },
   {
     title: "Dental Material Trading",
     image: DentalMaterialImg,
     description: "High-quality dental materials to keep your clinic and lab running smoothly",
-    pageurl: "/dental-material-trading",
+    pageurl: "/ServicesPage",
   },
   {
     title: "Dental Lab",
     image: DentalLabImg,
     description: "Precision-crafted crowns, bridges, and dentures with cutting-edge CAD/CAM technology",
-    pageurl: "/dental-lab",
+    pageurl: "/ServicesPage",
   },
 ];
 
@@ -51,14 +51,15 @@ const HomeServices = () => {
           {/* Left Services */}
           <div className="flex flex-col gap-6">
             {services.slice(0, 2).map(({ title, image, description, pageurl }) => (
+              <Link href={pageurl} key={title} >
               <div
-                key={title}
                 className="p-6 border bg-[#f3fbff] rounded-2xl shadow-lg transition-all duration-300 ease-in-out hover:scale-105 flex flex-col items-center text-center hover:border-[#87CEEB] hover:shadow-xl"
               >
                 <Image src={image} alt={title} width={80} height={80} className="rounded-lg" />
                 <h3 className="text-lg font-semibold text-[#1A3D5D] mt-3">{title}</h3>
                 <p className="text-gray-600 text-sm mt-1">{description}</p>
               </div>
+              </Link>
             ))}
           </div>
 
@@ -70,23 +71,25 @@ const HomeServices = () => {
           {/* Right Services */}
           <div className="flex flex-col gap-6">
             {services.slice(2, 4).map(({ title, image, description, pageurl }) => (
+              <Link href={pageurl} key={title}>
               <div
-                key={title}
+                
                 className="p-6 border bg-[#f3fbff] rounded-2xl shadow-lg transition-all duration-300 ease-in-out hover:scale-105 flex flex-col items-center text-center hover:border-[#87CEEB] hover:shadow-xl"
               >
                 <Image src={image} alt={title} width={80} height={80} className="rounded-lg" />
                 <h3 className="text-lg font-semibold text-[#1A3D5D] mt-3">{title}</h3>
                 <p className="text-gray-600 text-sm mt-1">{description}</p>
               </div>
+              </Link>
             ))}
           </div>  
         </div>
 
-        <div className="flex justify-center items-center mt-10">
+        {/* <div className="flex justify-center items-center mt-10">
             <Link href="/ServicesPage">
               <button className="btn btn-primary">Our Services</button>
             </Link>
-          </div>
+          </div> */}
       </div>
     </section>
   );

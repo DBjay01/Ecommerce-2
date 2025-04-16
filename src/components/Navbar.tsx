@@ -4,17 +4,15 @@ import Image from "next/image";
 import SearchBar from "./SearchBar";
 import dynamic from "next/dynamic";
 import logo from "@/assets/logo2.png";
-<<<<<<< HEAD
+import Mlogo from "@/assets/Mobile-Logo.png";
 import {
   ShoppingBag,
   Layers,
   Truck,
   Info,
-  Phone
+  Phone,
+  Headphones,
 } from "lucide-react";
-=======
-import Mlogo from "@/assets/Mobile-Logo.png";
->>>>>>> fb8c5f9ae4851de41065996db4ba72ea3e8390c6
 
 const NavIcons = dynamic(() => import("./NavIcons"), { ssr: false });
 
@@ -75,43 +73,50 @@ const Navbar = () => {
         </div> */}
 
       {/* SECONDARY NAVBAR */}
-      <div className="hidden md:flex items-center justify-center bg-gradient-to-r from-gray-50 via-white to-gray-50 py-3 shadow-sm border-t border-b border-gray-200">
-        <div className="flex gap-10 text-md font-medium text-gray-700">
+      <div className="hidden md:flex items-center bg-gradient-to-r from-gray-50 via-white to-gray-50 py-2 shadow-sm border-t border-b border-gray-200 px-6 relative">
+        {/* Centered Links */}
+        <div className="absolute left-1/2 transform -translate-x-1/2 flex gap-10 text-sm font-medium text-gray-700">
           <Link
             href="/list?cat=all-products"
             className="flex items-center gap-2 hover:text-lama hover:underline underline-offset-4 transition-all duration-200"
           >
-            <ShoppingBag size={18} />
+            <ShoppingBag size={16} />
             Shop Now
           </Link>
           <Link
             href="/list?cat=all-products"
             className="flex items-center gap-2 hover:text-lama hover:underline underline-offset-4 transition-all duration-200"
           >
-            <Layers size={18} />
+            <Layers size={16} />
             Category
           </Link>
           <Link
             href="/ServicesPage"
             className="flex items-center gap-2 hover:text-lama hover:underline underline-offset-4 transition-all duration-200"
           >
-            <Truck size={18} />
+            <Truck size={16} />
             Explore Services
           </Link>
           <Link
             href="/AboutUsPage"
             className="flex items-center gap-2 hover:text-lama hover:underline underline-offset-4 transition-all duration-200"
           >
-            <Info size={18} />
+            <Info size={16} />
             About
           </Link>
           <Link
             href="/ContactUsPage"
             className="flex items-center gap-2 hover:text-lama hover:underline underline-offset-4 transition-all duration-200"
           >
-            <Phone size={18} />
+            <Phone size={16} />
             Contact
           </Link>
+        </div>
+
+        {/* Right-Aligned Contact */}
+        <div className="ml-auto text-sm font-medium text-gray-700 flex items-center gap-2">
+          <Headphones size={16} />
+          <span>+91 90904 14106</span>
         </div>
       </div>
 

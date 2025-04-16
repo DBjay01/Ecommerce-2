@@ -25,12 +25,12 @@ const CategoriesList = async () => {
             key={item._id}
             className="flex-shrink-0 w-24 sm:w-28 md:w-32 text-center group"
           >
-            <div className="relative w-full aspect-square bg-white rounded-md shadow-sm flex items-center justify-center overflow-hidden">
+            <div className="relative w-full aspect-square bg-white rounded-md shadow-sm flex items-center justify-center overflow-hidden ">
               <Image
                 src={item.media?.mainMedia?.image?.url || "/cat.png"}
                 alt="image"
                 fill
-                className="object-contain p-3 transition-transform group-hover:scale-105"
+                className="object-contain p-3 transition-transform group-hover:scale-105 rounded-lg"
               />
             </div>
             <h3 className="mt-2 text-xs sm:text-sm font-medium text-gray-800 truncate">

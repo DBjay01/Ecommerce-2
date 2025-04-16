@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <div className="py-24 px-4 md:px-8 lg:px-16 xl:32 2xl:px-64 bg-gray-100 text-sm ">
+    <div className="py-24 px-4 md:px-8 lg:px-16 xl:32 2xl:px-64 bg-gray-200 text-sm ">
       {/* TOP */}
       <div className="flex flex-col md:flex-row justify-between gap-24">
         {/* LEFT */}
@@ -46,10 +46,10 @@ const Footer = () => {
             </div>
           </div>
           <div className="flex flex-col ">
-            <h1 className="font-medium text-lg pb-10">HELP</h1>
+            <h1 className="font-medium text-lg pb-10">POLICY</h1>
             <div className="flex flex-col gap-6">
-              <Link href="/ContactUsPage">Customer Service</Link>
-              <Link href="/AboutUsPage">Find a Store</Link>
+              <Link href="/ContactUsPage">order help</Link>
+              <Link href="/AboutUsPage">refund policy</Link>
               <Link href="/PrivacyPolicyPage">Privacy Policy</Link>
               <Link href="/TermsPage">Terms & Conditions</Link>
             </div>

@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { WixClientProvider } from "@/context/wixContext";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -11,6 +12,7 @@ export const metadata: Metadata = {
   title: "DentalShops",
   description: "E-commerce application ",
 };
+
 
 export default function RootLayout({
   children,
@@ -34,11 +36,12 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={inter.className}>
+      <body>
         <WixClientProvider>
           <Navbar />
-          <div className="mt-16">{children}</div> {/* Added mt-16 */}
+          <div className="mt-16">{children}</div>
           <Footer />
+          <WhatsAppButton /> {/* Add the WhatsApp button here */}
         </WixClientProvider>
       </body>
     </html>
