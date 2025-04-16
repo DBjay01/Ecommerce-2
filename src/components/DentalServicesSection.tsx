@@ -102,9 +102,10 @@ interface ServiceCardProps {
   services: string[];
   buttonText: string;
   buttonLink: string;
+  subtitle?: string; // Optional subtitle prop
 }
 
-export default function DentalServicesSection() {
+export default function   DentalServicesSection() {
   return (
     <section className="py-12 bg-gray-100 flex justify-center bg-gradient-to-b from-[#f5f9ff] to-[#b4d1f7] overflow-hidden">
       <div className="max-w-5xl w-full px-4">
@@ -119,24 +120,7 @@ export default function DentalServicesSection() {
           services={["Impression Materials", "Dental Cements", "Restorative Materials", "Disposable Consumables"]}
           buttonText="Shop Now"
           buttonLink="/list"
-        />
-        
-        <ServiceCard
-          image={DentalEquipmentImg}
-          title="Dental Equipment Manufacturing"
-          description="Our engineers develop cutting-edge dental equipment, including ergonomic chairs and diagnostic tools, providing reliable solutions to enhance patient care."
-          services={["Dental Chairs and Units", "Imaging and Diagnostic Equipment", "Sterilization Systems", "Handpieces and Tools"]}
-          buttonText="Explore Products"
-          buttonLink="/list"
-        />
-
-        <ServiceCard
-          image={DentalClinicImg}
-          title="Dental Clinics"
-          description="GurOm Dental Clinics offer advanced technology and expert care for all ages. From preventive check-ups to cosmetic and restorative treatments, we ensure a personalized, comfortable experience."
-          services={["Routine Check-Ups & Cleaning", "Cosmetic Dentistry", "Restorative Dentistry", "Orthodontic Services"]}
-          buttonText="Book Your Appointment"
-          buttonLink="/ContactUsPage"
+          subtitle="Restorative materials" // Optional subtitle prop
         />
 
         <ServiceCard
@@ -146,13 +130,36 @@ export default function DentalServicesSection() {
           services={["Custom Crowns & Bridges", "Denture Fabrication", "Implant-Supported Prosthetics", "Full-Mouth Reconstructions"]}
           buttonText="Partner With Us"
           buttonLink="/AboutUsPage"
+          subtitle="Disposable & consumables"
+         
         />
+        
+        <ServiceCard
+          image={DentalClinicImg}
+          title="Dental Clinics"
+          description="GurOm Dental Clinics offer advanced technology and expert care for all ages. From preventive check-ups to cosmetic and restorative treatments, we ensure a personalized, comfortable experience."
+          services={["Routine Check-Ups & Cleaning", "Cosmetic Dentistry", "Restorative Dentistry", "Advanced Dentistry"]}
+          buttonText="Book Your Appointment"
+          buttonLink="/ContactUsPage"
+          subtitle="Impression materials "
+        />
+
+        <ServiceCard
+          image={DentalEquipmentImg}
+          title="Dental Equipment Manufacturing"
+          description="Our engineers develop cutting-edge dental equipment, including ergonomic chairs and diagnostic tools, providing reliable solutions to enhance patient care."
+          services={["Dental Chairs and Units", "Imaging and Diagnostic Equipment", "Sterilization Systems", "Handpieces and Tools"]}
+          buttonText="Explore Products"
+          buttonLink="/list"
+          subtitle="Dental instruments"
+
+        />        
       </div>
     </section>
   );
 }
 
-const ServiceCard: React.FC<ServiceCardProps> = ({ image, title, description, services, buttonText, buttonLink }) => {
+const ServiceCard: React.FC<ServiceCardProps> = ({ image, title, description, services, buttonText, buttonLink,subtitle }) => {
   return (
     <div className="bg-white shadow-lg rounded-xl hover:border-2 hover:border-[#87CEEB] overflow-hidden flex flex-col md:flex-row mt-8 transition-transform transform hover:scale-105 duration-300">
       <div className="md:w-1/2 p-6 flex flex-col items-center bg-gradient-to-br from-white to-[#eaf6fd]">
@@ -161,7 +168,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ image, title, description, se
         <p className="text-gray-700 mt-3 text-center leading-relaxed">{description}</p>
       </div>
       <div className="md:w-1/2 bg-[#eaf6fd] p-6 flex flex-col justify-center items-center">
-        <h3 className="text-xl font-semibold text-gray-800 text-center mb-4">What We Offer:</h3>
+        <h3 className="text-xl font-semibold text-gray-800 text-center mb-4"> {subtitle}</h3>
         <ul className="text-gray-700 text-md space-y-2 text-center w-full">
           {services.map((service, index) => (
             <li key={index} className="bg-white px-3 py-2 pl-[7rem] rounded-md shadow-sm flex items-center justify-left space-x-2">
