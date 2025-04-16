@@ -52,37 +52,43 @@ const ProductList = async ({
         {res.items.map((product: products.Product) => (
           <Link
             href={"/" + product.slug}
-            className="flex flex-col gap-4 bg-white shadow-lg rounded-lg p-4 hover:shadow-xl transition-shadow duration-300"
+            className="flex flex-col justify-between bg-white shadow-lg rounded-lg p-4 hover:shadow-xl transition-shadow duration-300"
             key={product._id}
           >
-            <div className="relative w-full h-48">
+            {/* Image */}
+            <div className="relative w-full h-48 mb-4">
               <Image
                 src={product.media?.mainMedia?.image?.url || "/product.png"}
-                alt=""
+                alt={product.name || "Product"}
                 fill
                 sizes="25vw"
                 className="object-contain rounded-md"
               />
             </div>
 
-            <div className="flex justify-between">
-              <span className="font-medium text-sm">{product.name}</span>
+            {/* Info + Price */}
+            <div className="flex justify-between items-start mb-4">
+              <div className="flex flex-col">
+                <span className="font-semibold text-sm text-gray-800 line-clamp-2">{product.name}</span>
+                <span className="text-xs text-gray-600">Company: {product.brand}</span>
+              </div>
+              <span className="font-semibold text-lg text-gray-900 whitespace-nowrap">₹{product.price?.price}</span>
+            </div>
 
-            </div>
-            <div>
-              <h4 className="text-xs">
-                <b>Company</b>: {product.brand}
-              </h4>
-            </div>
-            <div className="flex justify-between items-center gap-2">
-            <button className="rounded-2xl ring-1 ring-lama text-lama w-max py-2 px-1 md:px-4  text-xs hover:bg-lama hover:text-white">
-              Add To Cart
-            </button>
-            <span className="font-semibold text-lg">₹{product.price?.price}</span>
+            {/* Action Buttons */}
+            <div className="mt-auto flex flex-col gap-2 sm:flex-row sm:gap-4">
+              <button className="w-full rounded-xl ring-1 ring-lama text-lama py-2 text-sm hover:bg-lama hover:text-white transition-all">
+                Add To Cart
+              </button>
+              <button className="w-full rounded-xl bg-lama text-white py-2 text-sm hover:bg-lama/90 transition-all">
+                Buy Now
+              </button>
             </div>
           </Link>
         ))}
       </div>
+
+
       <div>
         {searchParams?.cat || searchParams?.name ? (
           <Pagination

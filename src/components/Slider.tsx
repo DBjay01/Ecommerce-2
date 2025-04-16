@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Box, Star, CheckCircle, Shield } from "lucide-react";
+import { Box, Star, Layers, Sparkles, BadgeCheck, Tag} from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import img1 from "@/assets/banner_2.jpg"; // Replace with your Gingifast image
@@ -91,9 +91,8 @@ const Slider = () => {
           {slides.map((_, index) => (
             <div
               key={index}
-              className={`w-3 h-3 rounded-full ring-1 ring-gray-600 cursor-pointer flex items-center justify-center ${
-                current === index ? "scale-150" : ""
-              }`}
+              className={`w-3 h-3 rounded-full ring-1 ring-gray-600 cursor-pointer flex items-center justify-center ${current === index ? "scale-150" : ""
+                }`}
               onClick={() => setCurrent(index)}
             >
               {current === index && (
@@ -105,22 +104,23 @@ const Slider = () => {
       </div>
       <div className="hidden sm:flex bg-blue-100 rounded-xl px-6 py-4 mt-6 mx-10 flex-wrap justify-center gap-6 md:gap-12 text-sm md:text-base font-medium text-gray-800">
         <div className="flex items-center gap-2">
-          <Box className="w-5 h-5 text-gray-900" />
+          <Box className="w-6 h-6 text-gray-900 flex-shrink-0" />
           <span>200+ Products</span>
         </div>
         <div className="flex items-center gap-2">
-          <Star className="w-5 h-5 text-gray-900" />
+          <Sparkles className="w-6 h-6 text-gray-900 flex-shrink-0" />
           <span>40+ Brands</span>
         </div>
         <div className="flex items-center gap-2">
-          <CheckCircle className="w-5 h-5 text-gray-900" />
+          <BadgeCheck className="w-6 h-6 text-gray-900 flex-shrink-0" />
           <span>100% Original</span>
         </div>
         <div className="flex items-center gap-2">
-          <Shield className="w-5 h-5 text-gray-900" />
+          <Tag className="w-6 h-6 text-gray-900 flex-shrink-0" />
           <span>Best price</span>
         </div>
       </div>
+
     </>
   );
 };
