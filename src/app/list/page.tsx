@@ -16,7 +16,7 @@ const ListPage = async ({ searchParams }: { searchParams: any }) => {
   console.log(searchParams);
 
   return (
-    <div className="px-4  md:px-8 lg:px-16 xl:px-32 2xl:px-64 relative">
+    <div className="px-4 md:mt-36 md:px-8 lg:px-16 xl:px-32 2xl:px-64 relative">
       {/* SearchBar for Mobile */}
       <div className="block md:hidden py-10 mt-4">
         <SearchBar />

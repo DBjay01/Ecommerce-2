@@ -4,6 +4,7 @@ import Image from "next/image";
 import SearchBar from "./SearchBar";
 import dynamic from "next/dynamic";
 import logo from "@/assets/logo2.png";
+import Mlogo from "@/assets/Mobile-Logo.png";
 
 const NavIcons = dynamic(() => import("./NavIcons"), { ssr: false });
 
@@ -22,7 +23,7 @@ const Navbar = () => {
             href="/"
             className="absolute left-1/2 transform -translate-x-1/2"
           >
-            <div className="text-2xl tracking-wide">GurOm</div>
+            <Image src={Mlogo} alt="Logo" width={150} height={40} />
           </Link>
 
           {/* Cart and Search Icons on the Right */}
