@@ -14,7 +14,7 @@ const slides = [
     title: "Precision Dental Tools",
     description: "Advanced care for a healthier smile!",
     img: img1, // Update this to your Gingifast banner image
-    url: "/list",
+    url: "/list?cat=all-products",
     bg: "bg-gradient-to-r from-pink-50 to-white",
   },
   {
@@ -22,7 +22,7 @@ const slides = [
     title: "High-Precision Dental Handpieces",
     description: "Smooth, precise, and reliable for every procedure!",
     img: img2,
-    url: "/list",
+    url: "/list?cat=all-products",
     bg: "bg-gradient-to-r from-pink-50 to-blue-50",
   },
   {
@@ -30,7 +30,7 @@ const slides = [
     title: "Orthodontic Instruments",
     description: "Sterilized. Reliable. Ready for Every Dental Procedure!",
     img: img3,
-    url: "/list",
+    url: "/list?cat=all-products",
     bg: "bg-gradient-to-r from-blue-50 to-yellow-50",
   },
 ];

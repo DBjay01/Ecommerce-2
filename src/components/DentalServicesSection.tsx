@@ -79,7 +79,7 @@
 //           ))}
 //         </ul>
 //         <a
-//           href="/list"
+//           href="/list?cat=all-products"
 //           className="mt-6 px-6 py-3 bg-[#004b87] text-white font-semibold rounded-lg shadow-md hover:bg-[#003366] transition duration-300"
 //         >
 //           {buttonText}
@@ -119,7 +119,7 @@ export default function   DentalServicesSection() {
           description="We supply top-quality dental materials, from impression compounds to restorative solutions, ensuring clinics and labs have everything needed for seamless operations."
           services={["Impression Materials", "Dental Cements", "Restorative Materials", "Disposable Consumables"]}
           buttonText="Shop Now"
-          buttonLink="/list"
+          buttonLink="/list?cat=all-products"
           subtitle="Restorative materials" // Optional subtitle prop
         />
 
@@ -150,7 +150,7 @@ export default function   DentalServicesSection() {
           description="Our engineers develop cutting-edge dental equipment, including ergonomic chairs and diagnostic tools, providing reliable solutions to enhance patient care."
           services={["Dental Chairs and Units", "Imaging and Diagnostic Equipment", "Sterilization Systems", "Handpieces and Tools"]}
           buttonText="Explore Products"
-          buttonLink="/list"
+          buttonLink="/list?cat=all-products"
           subtitle="Dental instruments"
 
         />        

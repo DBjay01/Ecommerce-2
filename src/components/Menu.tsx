@@ -26,7 +26,7 @@ const Menu = () => {
           <Link href="/" onClick={handleMenuClick}>
             Homepage
           </Link>
-          <Link href="/list" onClick={handleMenuClick}>
+          <Link href="/list?cat=all-products" onClick={handleMenuClick}>
             Shop
           </Link>
           <Link href="/ServicesPage" onClick={handleMenuClick}>

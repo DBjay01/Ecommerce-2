@@ -65,7 +65,7 @@ const HomeShop = () => {
         {/* View More Button */}
         <div className="mt-10 text-center">
           <a
-            href="/list"
+            href="/list?cat=all-products"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-all"

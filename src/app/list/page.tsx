@@ -22,7 +22,7 @@ const ListPage = async ({ searchParams }: { searchParams: any }) => {
   console.log(searchParams);
 
   return (
-    <div className="px-4 pt-20 md:px-8 lg:px-16 xl:px-32 2xl:px-64 relative">
+    <div className="px-4 md:pt-20 md:px-8 lg:px-16 xl:px-32 2xl:px-64 relative">
       {/* SearchBar for Mobile */}
       <div className="block md:hidden py-10 mt-4">
         <SearchBar />
@@ -48,7 +48,7 @@ const ListPage = async ({ searchParams }: { searchParams: any }) => {
         </div>
       </div> */}
 
-<div className="bg-pink-50 px-4 py-4 sm:py-6 flex flex-col sm:flex-row justify-around items-center gap-4 rounded-xl shadow-md">
+      <div className="bg-pink-50 px-4 py-4 sm:py-6 sm:flex hidden justify-around items-center gap-4 rounded-xl shadow-md">
         {/* Free Shipping */}
         <div className="flex flex-col items-center text-center max-w-xs">
           <Truck className="w-6 h-6 text-lama mb-1.5" />

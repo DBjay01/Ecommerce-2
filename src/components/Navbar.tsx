@@ -36,7 +36,7 @@ const Navbar = () => {
 
           {/* Cart and Search Icons on the Right */}
           <div className="flex items-center gap-4">
-            <Link href="/list">
+            <Link href="/list?cat=all-products">
               <Image src="/search.png" alt="" width={22} height={22} />
             </Link>
             <Link href="/CheckoutPage">
@@ -120,11 +120,7 @@ const Navbar = () => {
         </div>
       </div>
 
-        {/* Right-Aligned Contact */}
-        <div className="ml-auto text-sm font-medium text-gray-700 flex items-center gap-2">
-          <Headphones size={16} />
-          <span>+91 90904 14106</span>
-        </div>
+        
       </div>
   );
 };
