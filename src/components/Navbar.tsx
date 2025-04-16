@@ -120,7 +120,12 @@ const Navbar = () => {
         </div>
       </div>
 
-    </div>
+        {/* Right-Aligned Contact */}
+        <div className="ml-auto text-sm font-medium text-gray-700 flex items-center gap-2">
+          <Headphones size={16} />
+          <span>+91 90904 14106</span>
+        </div>
+      </div>
   );
 };
 
