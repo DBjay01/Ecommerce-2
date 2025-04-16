@@ -53,7 +53,7 @@ const Slider = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
-    }, 5000);
+    }, 20000);
     return () => clearInterval(interval);
   }, []);
 
@@ -80,27 +80,27 @@ const Slider = () => {
             >
               {/* LEFT TEXT CONTENT */}
               <div className="w-1/2 flex flex-col ml-6 justify-center px-6 gap-2">
-                <h2 className="text-lg md:text-2xl lg:text-3xl text-gray-700 font-medium">
+                <h2 className="text-lg md:text-2xl lg:text-3xl text-blue-800 font-medium">
                   {slide.title}
                 </h2>
                 <p className="text-sm hidden md:block md:text-lg lg:text-xl text-gray-600">
                   {slide.description}
                 </p>
                 <Link href={slide.url}>
-                  <button className="mt-4 w-fit bg-red-600 hover:bg-red-700 text-white text-sm md:text-base px-4 py-2 rounded">
+                  <button className="mt-4 w-fit bg-blue-300 hover:bg-blue-700 text-black text-sm md:text-base px-4 py-2 rounded">
                     Explore More
                   </button>
                 </Link>
               </div>
 
               {/* RIGHT IMAGE */}
-              <div className="w-1/2 h-full relative p-4">
+              <div className="w-1/2 h-full relative p-4 rounded-xl">
                 <Image
                   src={slide.img}
                   alt={slide.title}
                   fill
                   sizes="50vw"
-                  className="object-contain"
+                  className="object-contain rounded-lg"
                 />
               </div>
             </div>
