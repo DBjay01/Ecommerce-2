@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { WixClientProvider } from "@/context/wixContext";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
