@@ -1,7 +1,16 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Box, Star, Layers, Sparkles, BadgeCheck, Tag, ChevronLeft, ChevronRight } from "lucide-react";
+import {
+  Box,
+  Star,
+  Layers,
+  Sparkles,
+  BadgeCheck,
+  Tag,
+  ChevronLeft,
+  ChevronRight,
+} from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import img1 from "@/assets/banner_2.jpg";
@@ -16,7 +25,8 @@ const slides = [
   {
     id: 1,
     title: "Dental Material Trading",
-    description: "We supply top-quality dental materials, ensuring clinics and labs have everything needed for seamless operations.",
+    description:
+      "We supply top-quality dental materials, ensuring clinics and labs have everything needed for seamless operations.",
     img: DentalMaterialImg,
     url: "/ServicesPage",
     bg: "bg-gradient-to-r from-pink-50 to-white",
@@ -24,7 +34,8 @@ const slides = [
   {
     id: 2,
     title: "Dental Lab",
-    description: "At GurOm Dental Lab, crafting custom crowns, bridges, and dentures. Partner with us for high-quality prosthetic solutions.",
+    description:
+      "At GurOm Dental Lab, crafting custom crowns, bridges, and dentures. Partner with us for high-quality prosthetic solutions.",
     img: DentalLabImg,
     url: "/ServicesPage",
     bg: "bg-gradient-to-r from-pink-50 to-blue-50",
@@ -32,7 +43,8 @@ const slides = [
   {
     id: 3,
     title: "Dental Clinics",
-    description: "GurOm Dental Clinics offer advanced technology and expert care for all ages. we ensure a personalized, comfortable experience.",
+    description:
+      "GurOm Dental Clinics offer advanced technology and expert care for all ages. we ensure a personalized, comfortable experience.",
     img: DentalClinicImg,
     url: "/ServicesPage",
     bg: "bg-gradient-to-r from-blue-50 to-yellow-50",
@@ -40,11 +52,12 @@ const slides = [
   {
     id: 3,
     title: "Dental Equipment Manufacturing",
-    description: "Our engineers develop cutting-edge dental equipment, providing reliable solutions to enhance patient care.",
+    description:
+      "Our engineers develop cutting-edge dental equipment, providing reliable solutions to enhance patient care.",
     img: DentalEquipmentImg,
     url: "/ServicesPage",
     bg: "bg-gradient-to-r from-blue-50 to-yellow-50",
-  }
+  },
 ];
 
 const Slider = () => {
@@ -69,6 +82,7 @@ const Slider = () => {
     <>
       <div className="relative mt-32  md:mx-20 rounded-lg h-[25vh] md:h-[45vh] lg:h-[55vh] overflow-hidden">
         {/* SLIDES */}
+        {/* SLIDES */}
         <div
           className="w-max h-full flex transition-all ease-in-out duration-1000"
           style={{ transform: `translateX(-${current * 100}vw)` }}
@@ -79,15 +93,15 @@ const Slider = () => {
               key={slide.id}
             >
               {/* LEFT TEXT CONTENT */}
-              <div className="w-1/2 flex flex-col ml-6 justify-center px-6 gap-2">
-                <h2 className="text-lg md:text-2xl lg:text-3xl text-blue-800 font-medium">
+              <div className="w-1/2 flex flex-col ml-6 justify-center px-6 gap-4">
+                <h2 className="text-lg md:text-3xl lg:text-4xl font-bold text-[#163f60] tracking-wide leading-tight">
                   {slide.title}
                 </h2>
-                <p className="text-sm hidden md:block md:text-lg lg:text-xl text-gray-600">
+                <p className="text-xs md:text-md lg:text-base text-gray-700 font-normal leading-snug line-clamp-2 md:line-clamp-none">
                   {slide.description}
                 </p>
                 <Link href={slide.url}>
-                  <button className="mt-4 w-fit bg-blue-300 hover:bg-blue-700 text-black text-sm md:text-base px-4 py-2 rounded">
+                  <button className="mt-4 w-fit bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white text-sm md:text-base px-3 py-2 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
                     Explore More
                   </button>
                 </Link>
@@ -157,6 +171,26 @@ const Slider = () => {
         </div>
         <div className="flex items-center gap-2">
           <Tag className="w-6 h-6 text-gray-900 flex-shrink-0" />
+          <span>Best price</span>
+        </div>
+      </div>
+
+      {/* ADDITIONAL INFO FOR MOBILE */}
+      <div className="flex sm:hidden bg-blue-100 rounded-xl px-4 py-2 mt-6 mx-4 justify-between items-center text-xs font-medium text-gray-800">
+        <div className="flex flex-col items-center gap-1">
+          <Box className="w-4 h-4 text-gray-900 flex-shrink-0" />
+          <span>200+ Products</span>
+        </div>
+        <div className="flex flex-col items-center gap-1">
+          <Sparkles className="w-4 h-4 text-gray-900 flex-shrink-0" />
+          <span>40+ Brands</span>
+        </div>
+        <div className="flex flex-col items-center gap-1">
+          <BadgeCheck className="w-4 h-4 text-gray-900 flex-shrink-0" />
+          <span>100% Original</span>
+        </div>
+        <div className="flex flex-col items-center gap-1">
+          <Tag className="w-4 h-4 text-gray-900 flex-shrink-0" />
           <span>Best price</span>
         </div>
       </div>

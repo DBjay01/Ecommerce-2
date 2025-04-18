@@ -20,7 +20,7 @@ const Navbar = () => {
   return (
     <div className="fixed top-0 left-0 w-full z-50 padding-top">
       {/* MAIN NAVBAR */}
-      <div className="h-16 px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64 bg-white shadow-md">
+      <div className="h-20 px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64 bg-white shadow-md">
         {/* MOBILE */}
         <div className="h-full flex items-center justify-between md:hidden">
           {/* Menu Icon on the Left */}
@@ -121,7 +121,44 @@ const Navbar = () => {
         </div>
       </div>
 
-        
+        {/* THIRD NAVBAR (Mobile Only) */}
+<div className="flex md:hidden justify-center gap-4 items-center  bg-gradient-to-r from-blue-200 to-blue-100 py-2 shadow-sm border-t border-b border-gray-200 px-2 overflow-x-auto text-xs font-medium">
+  <Link
+    href="/list?cat=all-products"
+    className="flex items-center gap-1 hover:text-lama hover:underline underline-offset-2 transition-all duration-200"
+  >
+    <Layers size={14} />
+    Categories
+  </Link>
+  <Link
+    href="/ServicesPage"
+    className="flex items-center gap-1 hover:text-lama hover:underline underline-offset-2 transition-all duration-200"
+  >
+    <Truck size={14} />
+    Services
+  </Link>
+  <Link
+    href="/list?cat=all-products"
+    className="flex items-center gap-1 hover:text-lama hover:underline underline-offset-2 transition-all duration-200"
+  >
+    <ShoppingBag size={14} />
+    Shop
+  </Link>
+  <Link
+    href="/AboutUsPage"
+    className="flex items-center gap-1 hover:text-lama hover:underline underline-offset-2 transition-all duration-200"
+  >
+    <Info size={14} />
+    About
+  </Link>
+  <Link
+    href="/ContactUsPage"
+    className="flex items-center gap-1 hover:text-lama hover:underline underline-offset-2 transition-all duration-200"
+  >
+    <Phone size={14} />
+    Contact
+  </Link>
+</div>
       </div>
   );
 };

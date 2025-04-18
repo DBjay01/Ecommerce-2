@@ -22,8 +22,8 @@ const Menu = () => {
         onClick={() => setOpen((prev) => !prev)}
       />
       {open && (
-        <div className="fixed bg-black text-white left-0 top-20 w-full h-[calc(100vh-80px)] flex flex-col items-center justify-center gap-8 text-xl z-[1100]"> {/* Use a higher z-index */}
-          <Link href="/" onClick={handleMenuClick}>
+        <div className="fixed bg-black text-white left-0 top-20 w-full h-[calc(100vh-80px)] flex flex-col items-center justify-start gap-8 text-xl z-[1100]"> {/* Use a higher z-index */}
+          <Link href="/" onClick={handleMenuClick} className="mt-20">
             Homepage
           </Link>
           <Link href="/list?cat=all-products" onClick={handleMenuClick}>
@@ -33,10 +33,10 @@ const Menu = () => {
             Our Services
           </Link>
           <Link href="/AboutUsPage" onClick={handleMenuClick}>
-            About
+            About Us
           </Link>
           <Link href="/ContactUsPage" onClick={handleMenuClick}>
-            Contact
+            Contact Us
           </Link>
           <Link href="/CheckoutPage" onClick={handleMenuClick}>
             Cart
