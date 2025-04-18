@@ -16,7 +16,7 @@ const AboutUsPage = () => {
       {/* About Section */}
       <section
         ref={aboutRef}
-        className="relative pt-16 pb-24 bg-gradient-to-b from-white to-[#87CEEB] overflow-hidden"
+        className="relative pt-24 md:pt-16 pb-24 bg-gradient-to-b from-white to-[#87CEEB] overflow-hidden"
       >
         <div className="container -mt-8 mx-auto px-6 lg:px-16">
           <div className="md:flex items-center justify-end">

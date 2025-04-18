@@ -11,7 +11,7 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 const ContactUsPage = () => {
   return (
     <div>
-      <section className="pt-8 pb-0 md:-mt-28 bg-gradient-to-b from-white to-[#87CEEB] overflow-x-clip">
+      <section className="pt-24 md:pt-8 pb-0 md:-mt-28 bg-gradient-to-b from-white to-[#87CEEB] overflow-x-clip">
         <div className="container  max-w-[1200px] mx-auto px-4">
           <div className="md:flex items-center">
             <div className="md:w-1/2">
