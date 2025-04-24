@@ -18,7 +18,7 @@ import img2 from "@/assets/banner_3.jpg";
 import img3 from "@/assets/banner_6.jpg";
 import DentalClinicImg from "@/assets/Dental_Clinics_a1.jpg";
 import DentalLabImg from "@/assets/Dental_Lab_a1.jpg";
-import DentalMaterialImg from "@/assets/Dental_Material_a1.jpg";
+import DentalMaterialImg from "@/assets/banner-1.png";
 import DentalEquipmentImg from "@/assets/Dental_Equipment_Manufacturing_a1.jpg";
 
 const slides = [
