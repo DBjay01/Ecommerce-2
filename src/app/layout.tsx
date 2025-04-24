@@ -23,6 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+      <meta name="google-site-verification" content="7Y9V1zYu-uHKocFgwFyfvZkI3JpDCX7IOIQ5biqZdZk" />
         {/* Microsoft Clarity Integration */}
         <script
           type="text/javascript"
