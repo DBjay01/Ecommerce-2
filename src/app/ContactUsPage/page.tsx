@@ -19,7 +19,7 @@ const ContactUsPage = () => {
                 Contact Us
               </h1>
               <p className="text-xl text-[#010D3E] tracking-tight mt-6">
-                At Guruom Dental Clinic, we combine advanced technology with a personalized approach to provide high-quality dental care in a safe and comfortable environment. Whether you're visiting for a routine check-up or a complex dental procedure, our experienced team is committed to restoring and enhancing your smile with precision and care.
+                At Guruom Dental Clinic, we combine advanced technology with a personalized approach to provide high-quality dental care in a safe and comfortable environment. Whether you are visiting for a routine check-up or a complex dental procedure, our experienced team is committed to restoring and enhancing your smile with precision and care.
               </p>
               <div className="flex gap-1 items-center mt-[30px]">
                 <a href="/#"><button className="btn btn-primary"> Shop Now </button></a>
