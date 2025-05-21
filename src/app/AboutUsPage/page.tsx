@@ -76,9 +76,7 @@ const AboutUsPage = () => {
             >
               <h2 className="text-4xl font-bold text-blue-600">Our Vision</h2>
               <p className="text-lg text-gray-700 mt-4">
-                To revolutionize the dental industry by providing world-class,
-                innovative dental care and solutions that improve patient
-                outcomes and the quality of dental practices.
+                Shaping the Future of Dentistry — With Quality, Care, and Innovation.
               </p>
             </motion.div>
 
@@ -91,10 +89,7 @@ const AboutUsPage = () => {
             >
               <h2 className="text-4xl font-bold text-blue-600">Our Mission</h2>
               <p className="text-lg text-gray-700 mt-4">
-                We are committed to delivering exceptional dental services,
-                superior materials, and cutting-edge equipment to ensure that
-                every patient receives the best care, and every clinic operates
-                at the highest standard of excellence.
+                What began as a modest operation has grown into one of the leading dental product outsourcing hubs across the state — driven by quality, trust, and commitment.
               </p>
             </motion.div>
           </div>
@@ -139,48 +134,6 @@ const AboutUsPage = () => {
         </div>
       </section>
 
-      {/* Certifications & Achievements */}
-      <section className="relative py-24 bg-gradient-to-b from-gray-900 via-black to-gray-900 text-center text-white">
-        {/* Diagonal Wave Separator */}
-        <div className="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-gray-800 to-transparent transform -skew-y-6"></div>
-
-        <div className="container mx-auto px-6 lg:px-16">
-          <h2 className="text-5xl font-bold text-yellow-400 tracking-wide mb-16">
-            Certifications & Achievements
-          </h2>
-
-          {/* Floating Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Achievement 1 */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1 }}
-              className="relative bg-gray-800/70 backdrop-blur-xl shadow-xl rounded-2xl p-8 flex items-center space-x-4 border border-gray-700 hover:shadow-2xl transition-transform transform hover:-translate-y-2 hover:border-yellow-400"
-            >
-              <div className="w-16 h-16 flex items-center justify-center bg-yellow-400 text-black text-3xl font-bold rounded-full shadow-lg"></div>
-              <p className="text-xl font-semibold text-gray-200">
-                ISO Certified Dental Labs (2020)
-              </p>
-            </motion.div>
-
-            {/* Achievement 2 */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1, delay: 0.3 }}
-              className="relative bg-gray-800/70 backdrop-blur-xl shadow-xl rounded-2xl p-8 flex items-center space-x-4 border border-gray-700 hover:shadow-2xl transition-transform transform hover:-translate-y-2 hover:border-yellow-400"
-            >
-              <div className="w-16 h-16 flex items-center justify-center bg-yellow-400 text-black text-3xl font-bold rounded-full shadow-lg">
-                🎖
-              </div>
-              <p className="text-xl font-semibold text-gray-200">
-                Pune&apos;s Most Innovative Dental Service Provider (2022)
-              </p>
-            </motion.div>
-          </div>
-        </div>
-      </section>
 
       {/* <section className="py-24 bg-blue-500 text-white text-center">
                 <div className="container mx-auto px-6 lg:px-16">

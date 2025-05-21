@@ -18,8 +18,8 @@ const ServicesPage = () => {
                 Our Dental Services
               </h1>
               <p className="text-xl text-[#010D3E] tracking-tight mt-6">
-              Experience top-tier dental care, manufacturing, and trading with GurOm Dental. From cutting-edge dental technology to premium materials, we provide comprehensive solutions for professionals and patients alike. Trust us for innovation, quality, and excellence in every aspect of dental care.
-              </p>
+             At Guruom Dental, we offer a full spectrum of dental services — from manufacturing high-quality dental materials to providing expert dental lab work and clinical care. With a dedicated team of professionals, we ensure precision, quality, and reliability in everything we do.
+             </p>
               <div className="flex gap-1 items-center pt-10">
             <a href="#services"><button className="btn btn-primary"> Our Services </button></a>
           </div>

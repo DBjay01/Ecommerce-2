@@ -22,7 +22,7 @@ const ListPage = async ({ searchParams }: { searchParams: any }) => {
   console.log(searchParams);
 
   return (
-    <div className="px-4 pt-8 md:pt-20 md:px-8 lg:px-16 xl:px-32 2xl:px-64 relative">
+    <div className="px-4 pt-8 md:pt-20 bg-slate-100 md:px-8 lg:px-16 xl:px-32 2xl:px-64 relative">
       {/* SearchBar for Mobile */}
       <div className="block md:hidden py-10 mt-4">
         <SearchBar />
@@ -53,7 +53,7 @@ const ListPage = async ({ searchParams }: { searchParams: any }) => {
         <div className="flex flex-col items-center text-center max-w-xs">
           <Truck className="w-6 h-6 text-lama mb-1.5" />
           <h3 className="text-sm font-semibold text-gray-700">Free Shipping</h3>
-          <p className="text-xs text-gray-500 mt-0.5">On orders above ₹999</p>
+          <p className="text-xs text-gray-500 mt-0.5">In pune, Ahmednagar, <br></br>Aurangabad and nashik</p>
         </div>
 
         {/* Doorstep Delivery */}

@@ -116,7 +116,7 @@ export default function   DentalServicesSection() {
         <ServiceCard
           image={DentalMaterialImg}
           title="Dental Material Trading"
-          description="We supply top-quality dental materials, from impression compounds to restorative solutions, ensuring clinics and labs have everything needed for seamless operations."
+          description="At Guruom Dental, we specialize in the trading and distribution of premium dental materials to clinics, labs, and institutions. We offer a wide range of high-quality, GST-billed dental products sourced from trusted manufacturers across India and abroad. Whether you are a dentist, dental technician, or a distributor, we ensure timely delivery, competitive pricing, and genuine products."
           services={["Impression Materials", "Dental Cements", "Restorative Materials", "Disposable Consumables"]}
           buttonText="Shop Now"
           buttonLink="/list?cat=all-products"
@@ -126,7 +126,7 @@ export default function   DentalServicesSection() {
         <ServiceCard
           image={DentalLabImg}
           title="Dental Lab"
-          description="At GurOm Dental Lab, precision meets innovation with CAD/CAM technology, crafting custom crowns, bridges, and dentures. Partner with us for high-quality prosthetic solutions."
+          description="Guruom Dental began its journey 2019, our lab boats an impressive array of state-of-the-art equipment, including advance CAD software, 3D printers, milling machines, and even a 3D metal Printer (DMLS)"
           services={["Custom Crowns & Bridges", "Denture Fabrication", "Implant-Supported Prosthetics", "Full-Mouth Reconstructions"]}
           buttonText="Partner With Us"
           buttonLink="/AboutUsPage"
