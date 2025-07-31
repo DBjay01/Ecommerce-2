@@ -81,7 +81,7 @@ const Add = ({
         </div>
         <button
           onClick={addItem}
-          className="w-36 text-sm rounded-3xl ring-1 ring-lama text-lama py-2 px-4 hover:bg-lama hover:text-white disabled:cursor-not-allowed disabled:bg-pink-200 disabled:ring-0 disabled:text-white disabled:ring-none"
+          className="w-36 text-sm rounded-3xl ring-1 ring-orange-600 text-orange-600 py-2 px-4 hover:bg-orange-600 hover:text-white disabled:cursor-not-allowed disabled:bg-pink-200 disabled:ring-0 disabled:text-white disabled:ring-none"
         >
           Add To Cart
         </button>

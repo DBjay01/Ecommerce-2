@@ -72,15 +72,15 @@ const ProductList = async ({
                 <span className="font-semibold text-sm text-gray-800 line-clamp-2">{product.name}</span>
                 <span className="text-xs text-gray-600">Company: {product.brand}</span>
               </div>
-              <span className="font-semibold text-lg text-gray-900 whitespace-nowrap">₹{product.price?.price}</span>
+              <span className="font-bold text-lg text-orange-600 whitespace-nowrap">₹{product.price?.price}</span>
             </div>
 
             {/* Action Buttons */}
             <div className="mt-auto flex flex-col gap-2 sm:flex-row sm:gap-4">
-              <button className="w-full rounded-xl ring-1 ring-lama text-lama py-2 text-sm hover:bg-lama hover:text-white transition-all">
+              <button className="w-full rounded-xl ring-1 ring-orange-600 text-orange-600 py-2 text-sm hover:bg-orange-600 hover:text-white transition-all">
                 Add To Cart
               </button>
-              <button className="w-full rounded-xl bg-lama text-white py-2 text-sm hover:bg-lama/90 transition-all">
+              <button className="w-full rounded-xl bg-orange-600 text-white py-2 text-sm hover:bg-orange-600/90 transition-all">
                 Buy Now
               </button>
             </div>

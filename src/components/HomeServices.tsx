@@ -50,10 +50,10 @@ const HomeServices = () => {
             {services.slice(0, 2).map(({ title, image, description, pageurl }) => (
               <Link href={pageurl} key={title}>
                 <div
-                  className="p-4 border bg-[#f3fbff] rounded-xl shadow-md transition-all duration-300 ease-in-out hover:scale-105 flex flex-col items-center text-center hover:border-[#87CEEB] hover:shadow-lg"
+                  className="p-4 border bg-[##f5f9fa] rounded-xl shadow-md transition-all duration-300 ease-in-out hover:scale-105 flex flex-col items-center text-center hover:border-[#87CEEB] hover:shadow-lg"
                 >
                   <Image src={image} alt={title} width={60} height={60} className="rounded-lg" />
-                  <h3 className="text-sm font-semibold text-[#1A3D5D] mt-2">{title}</h3>
+                  <h3 className="text-lg font-bold text-orange-600 mt-2">{title}</h3>
                   <p className="text-gray-600 text-xs mt-1">{description}</p>
                 </div>
               </Link>
@@ -70,10 +70,10 @@ const HomeServices = () => {
             {services.slice(2, 4).map(({ title, image, description, pageurl }) => (
               <Link href={pageurl} key={title}>
                 <div
-                  className="p-4 border bg-[#f3fbff] rounded-xl shadow-md transition-all duration-300 ease-in-out hover:scale-105 flex flex-col items-center text-center hover:border-[#87CEEB] hover:shadow-lg"
+                  className="p-4 border bg-[#f5f9fa] rounded-xl shadow-md transition-all duration-300 ease-in-out hover:scale-105 flex flex-col items-center text-center hover:border-[#87CEEB] hover:shadow-lg"
                 >
                   <Image src={image} alt={title} width={60} height={60} className="rounded-lg" />
-                  <h3 className="text-sm font-semibold text-[#1A3D5D] mt-2">{title}</h3>
+                  <h3 className="text-lg font-bold text-orange-600 mt-2">{title}</h3>
                   <p className="text-gray-600 text-xs mt-1">{description}</p>
                 </div>
               </Link>

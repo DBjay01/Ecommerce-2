@@ -3,7 +3,7 @@ import Menu from "./Menu";
 import Image from "next/image";
 import SearchBar from "./SearchBar";
 import dynamic from "next/dynamic";
-import logo from "@/assets/logo2.png";
+import logo from "@/assets/new-logo.png";
 import Mlogo from "@/assets/Mobile-Logo.png";
 import {
   ShoppingBag,
@@ -83,7 +83,7 @@ const Navbar = () => {
     {/* Categories Dropdown */}
     <div className="relative group">
       <button className="flex items-center gap-2 hover:text-lama hover:underline underline-offset-4 transition-all duration-200">
-        <Layers size={18} />
+        <Layers size={18} className="text-orange-600" />
         Categories
         <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
@@ -101,22 +101,22 @@ const Navbar = () => {
     </div>
     {/* ...other links... */}
     <Link href="/ServicesPage" className="flex items-center gap-2 hover:text-lama hover:underline underline-offset-4 transition-all duration-200">
-      <Truck size={18} />
+      <Truck size={18} className="text-orange-600" />
       Explore Services
     </Link>
     <Link href="/list?cat=all-products" className="flex items-center gap-2 hover:text-lama hover:underline underline-offset-4 transition-all duration-200">
-      <ShoppingBag size={18} />
+      <ShoppingBag size={18} className="text-orange-600"/>
       Shop Now
     </Link>
     <Link href="/ContactUsPage" className="flex items-center gap-2 hover:text-lama hover:underline underline-offset-4 transition-all duration-200">
-      <Phone size={18} />
+      <Phone size={18} className="text-orange-600"/>
       Contact Us
     </Link>
   </div>
   {/* Right-Aligned Contact */}
   <div className="ml-auto text-sm font-medium text-gray-700 flex items-center gap-2">
-    <Headphones size={18} />
-    <span>+91 90904 14106</span>
+    {/* <Headphones size={18} /> */}
+    <span>shopsdental@gmail.com | +91 90904 14106</span>
   </div>
 </div>
 
