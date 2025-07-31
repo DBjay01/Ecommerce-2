@@ -4,6 +4,7 @@ import Image from "next/image";
 import SearchBar from "./SearchBar";
 import dynamic from "next/dynamic";
 import logo from "@/assets/new-logo.png";
+import logo2 from "@/assets/Nlogo.png";
 import Mlogo from "@/assets/Mobile-Logo.png";
 import {
   ShoppingBag,
@@ -34,7 +35,7 @@ const Navbar = () => {
             href="/"
             className="absolute left-1/2 transform -translate-x-1/2"
           >
-            <Image src={Mlogo} alt="Logo" width={150} height={40} />
+            <Image src={logo2} alt="Logo" width={150} height={40} />
           </Link>
 
           {/* Cart and Search Icons on the Right */}
@@ -52,7 +53,7 @@ const Navbar = () => {
         <div className="hidden md:flex items-center justify-between pt-3 h-full gap-6">
           {/* LEFT: Logo */}
           <Link href="/" className="flex items-center gap-3 my-4">
-            <Image src={logo} alt="Logo" width={550} height={38} />
+            <Image src={logo2} alt="Logo" width={250} height={28} />
 
           </Link>
 
@@ -83,7 +84,7 @@ const Navbar = () => {
     {/* Categories Dropdown */}
     <div className="relative group">
       <button className="flex items-center gap-2 hover:text-lama hover:underline underline-offset-4 transition-all duration-200">
-        <Layers size={18} className="text-orange-600" />
+        <Layers size={18} className="text-orange-600"  />
         Categories
         <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
