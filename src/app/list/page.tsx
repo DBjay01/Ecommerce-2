@@ -11,6 +11,7 @@ import {
   RotateCcw,
   Headphones,
 } from "lucide-react";
+import SearchBar_AllProducts from "@/components/SearchBar_AllProducts";
 
 const ListPage = async ({ searchParams }: { searchParams: any }) => {
   const WixClient = await wixClientServer();
@@ -96,14 +97,14 @@ const ListPage = async ({ searchParams }: { searchParams: any }) => {
       </Suspense> */}
 
       {/* Category title + Search bar */}
-      <div className="flex flex-col md:flex-row items-center justify-between my-10 gap-4">
-        <h1 className="text-2xl md:text-4xl font-bold tracking-tighter bg-gradient-to-b from-orange-600 to-orange-500 text-transparent bg-clip-text pb-2">
+      <div className="flex flex-row items-center justify-center my-10 gap-4">
+        <h1 className="text-2xl md:text-2xl font-bold tracking-tighter bg-gradient-to-b from-orange-600 to-orange-500 text-transparent bg-clip-text pb-2">
           {cat?.collection?.name}
         </h1>
 
         {/* Search bar beside category title */}
-        <div className="w-full md:w-1/3">
-          <SearchBar />
+        <div className="w-full md:w-1/2">
+          <SearchBar_AllProducts />
         </div>
       </div>
 

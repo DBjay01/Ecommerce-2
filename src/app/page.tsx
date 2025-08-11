@@ -7,6 +7,7 @@ import HomeServices from "@/components/HomeServices";
 import HomeShop from "@/components/HomeShop";
 import Overview from "@/components/Overview";
 import ProductList from "@/components/ProductList";
+import SearchBar_AllProducts from "@/components/SearchBar_AllProducts";
 import Slider from "@/components/Slider";
 import { WixClientContext } from "@/context/wixContext";
 import { useWixClient } from "@/hooks/useWixClient";
@@ -58,13 +59,27 @@ const HomePage = async () => {
         </Suspense>
 
         {/* All Products Section */}
-        <div className="mt-12 flex justify-center">
+        {/* <div className="mt-12 flex justify-center">
           <Link href="/list?cat=all-products">
             <button className="mt-4 w-fit bg-orange-600 hover:bg-orange-700 text-white text-sm md:text-base px-4 py-2 rounded">
               All Products
             </button>
           </Link>
+
+        </div> */}
+
+        <div className="flex flex-row items-center justify-center my-10 gap-4">
+        <Link href="/list?cat=all-products">
+            <button className=" mt-5 w-fit bg-orange-600 hover:bg-orange-700 text-white text-sm md:text-base px-4 py-2 rounded">
+              All Products
+            </button>
+          </Link>
+
+        {/* Search bar beside category title */}
+        <div className="mt-5 w-full md:w-1/2">
+          <SearchBar_AllProducts />
         </div>
+      </div>
       </div>
       {/* <Overview/> */}
       <HomeServices />

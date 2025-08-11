@@ -21,14 +21,22 @@ const ContactUsPage = () => {
               <p className="text-lg text-[#010D3E] tracking-tight mt-6">
                 At Guruom Dental Clinic, we combine advanced technology with a personalized approach to provide high-quality dental care in a safe and comfortable environment. Whether you are visiting for a routine check-up or a complex dental procedure, our experienced team is committed to restoring and enhancing your smile with precision and care.
               </p>
+
               <div className="flex gap-1 items-center mt-[30px]">
-                <a href="/#"><button className="btn btn-primary"> Shop Now </button></a>
+                <Link href="/list?cat=all-products">
+              <button className="btn btn-primary">
+                Shop Now
+              </button>
+            </Link>
                 <button className="btn btn-text gap-2 font-semibold">
                   <Link href="/#service"><span>Our Services</span></Link>
                   {/* <img src={ArrowIcon} alt="Arrow Right" className="h-5 w-5" /> */}
                   <FontAwesomeIcon icon={faArrowRight} />
                 </button>
               </div>
+
+              
+              
 
             </div>
 
