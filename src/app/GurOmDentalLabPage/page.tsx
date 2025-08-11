@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 const GuruOmDentalLabPage = () => {
   return (
@@ -93,9 +94,11 @@ const GuruOmDentalLabPage = () => {
               Let us help you provide your patients with lasting, comfortable,
               and natural-looking dental restorations.
             </p>
-            <button className="mt-6 px-6 py-3 bg-orange-400 hover:bg-orange-500 text-white font-medium rounded-lg shadow-lg transition">
-              Contact GuruOm Dental Lab
-            </button>
+            <Link href="/ContactUsPage">
+              <button className="mt-6 px-6 py-3 bg-orange-400 hover:bg-orange-500 text-white font-medium rounded-lg shadow-lg transition">
+                Contact GuruOm Dental Lab
+              </button>
+            </Link>
           </section>
 
         </div>

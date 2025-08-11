@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 const GuromDentalWorldPage = () => {
   return (
@@ -80,6 +81,18 @@ const GuromDentalWorldPage = () => {
               <li>Fast and reliable delivery service</li>
               <li>Excellent customer support and after-sales service</li>
             </ul>
+          </section>
+
+          {/* Call to Action */}
+          <section className="text-center">
+            <p className="text-gray-700 max-w-2xl mx-auto">
+              Empower your business with data-driven insights, seamless workflows, and innovative digital solutions tailored to your goals.
+            </p>
+            <Link href="/ContactUsPage">
+              <button className="mt-6 px-6 py-3 bg-orange-400 hover:bg-orange-500 text-white font-medium rounded-lg shadow-lg transition">
+                Contact GurOm Dental World
+              </button>
+            </Link>
           </section>
         </div>
       </main>
