@@ -11,14 +11,14 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 const ContactUsPage = () => {
   return (
     <div>
-      <section className="pt-24 md:pt-8 pb-0 md:-mt-28 bg-gradient-to-b from-white to-[#87CEEB] overflow-x-clip">
+      <section className="pt-24 pb-0 md:-mt-28 bg-gradient-to-b from-white to-[#87CEEB] overflow-x-clip">
         <div className="container  max-w-[1200px] mx-auto px-4">
           <div className="md:flex items-center">
             <div className="md:w-1/2">
-              <h1 className="text-5xl md:text-7xl font-bold tracking-tighter bg-gradient-to-b from-black to-[#001E80] text-transparent bg-clip-text">
+              <h1 className="flex text-2xl md:text-3xl font-bold pb-3 tracking-tighter bg-gradient-to-b from-orange-600 to-orange-500 text-transparent bg-clip-text">
                 Contact Us
               </h1>
-              <p className="text-xl text-[#010D3E] tracking-tight mt-6">
+              <p className="text-lg text-[#010D3E] tracking-tight mt-6">
                 At Guruom Dental Clinic, we combine advanced technology with a personalized approach to provide high-quality dental care in a safe and comfortable environment. Whether you are visiting for a routine check-up or a complex dental procedure, our experienced team is committed to restoring and enhancing your smile with precision and care.
               </p>
               <div className="flex gap-1 items-center mt-[30px]">
@@ -32,13 +32,13 @@ const ContactUsPage = () => {
 
             </div>
 
-            <div className="mt-20 md:mt-0 md:h-[800px] md:flex-1 relative md:left-10 top-10">
+            <div className="mt-20 md:mt-0 md:h-[500px] md:flex-1 relative md:left-15 top-10">
               <Image
                 src={contact}
-                width={1400}
-                height={800}
+                width={1000}
+                height={600}
                 alt="Contact Us"
-                className="md:absolute md:h-[65%] md:w-auto md:max-w-none md:left-6 md:top-16 lg:left-0"
+                className="md:absolute md:h-[65%] md:w-auto md:max-w-none md:left-6 md:top-16 lg:left-20 lg:right-0"
                 priority
               />
             </div>
@@ -51,7 +51,7 @@ const ContactUsPage = () => {
       {/* Inquiry Form */}
       <section id="inquiryform" className="py-12 bg-gradient-to-t from-[#b4d1f7] to-[#FFFFFF] flex justify-center items-center">
         <div className="container max-w-[800px] mx-auto px-6 bg-white shadow-xl rounded-xl p-10 border-gray-1000">
-          <h2 className="text-center text-4xl md:text-6xl font-extrabold tracking-tight bg-gradient-to-b from-black to-[#001E80] text-transparent bg-clip-text">
+          <h2 className="flex justify-center text-2xl md:text-3xl font-bold pb-3 tracking-tighter bg-gradient-to-b from-orange-600 to-orange-500 text-transparent bg-clip-text">
             Inquiry Form
           </h2>
           <p className="text-center text-lg text-gray-600 mt-4">
@@ -68,7 +68,7 @@ const ContactUsPage = () => {
               className="p-4 border border-gray-300 rounded-lg w-full h-40 focus:outline-none focus:ring-4 focus:ring-blue-500 shadow-sm transition duration-200"
             ></textarea>
             <div className="flex justify-center">
-              <button type="submit" className="w-full md:w-auto px-8 py-3 bg-gradient-to-r from-blue-500 to-blue-700 text-white font-semibold rounded-lg shadow-lg hover:opacity-90 transition duration-300">
+              <button type="submit" className="w-full md:w-auto px-8 py-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold rounded-lg shadow-lg hover:opacity-90 transition duration-300">
                 Submit
               </button>
             </div>

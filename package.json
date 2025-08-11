@@ -16,7 +16,7 @@
     "@wix/ecom": "^1.0.1003",
     "@wix/sdk": "^1.15.14",
     "@wix/stores": "^1.0.389",
-    "framer-motion": "^12.5.0",
+    "framer-motion": "^12.23.12",
     "isomorphic-dompurify": "^2.22.0",
     "js-cookie": "^3.0.5",
     "lucide-react": "^0.488.0",

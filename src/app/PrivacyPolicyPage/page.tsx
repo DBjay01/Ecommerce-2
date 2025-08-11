@@ -4,7 +4,7 @@ import React from "react";
 
 const PrivacyPolicyPage = () => {
   return (
-    <div className="mt-24">
+    <div className="mt-[220px] md:pt-6">
       <section className="pt-8 pb-0 md:-mt-28 bg-gradient-to-b from-white to-[#87CEEB] overflow-x-clip">
         <div className="container max-w-[1200px] mx-auto px-4">
           <div className="md:flex items-center">

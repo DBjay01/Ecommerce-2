@@ -107,11 +107,17 @@ interface ServiceCardProps {
 
 export default function   DentalServicesSection() {
   return (
-    <section className="py-12 bg-gray-100 flex justify-center bg-gradient-to-b from-[#f5f9ff] to-[#b4d1f7] overflow-hidden">
+    <section className="py-12 bg-gray-100 flex justify-center bg-gradient-to-b from-[#ffffff] to-[#fff5eb] overflow-hidden">
       <div className="max-w-5xl w-full px-4">
-        <h1 className="text-4xl font-bold text-center text-gray-900 mb-10 p-4 md:text-6xl tracking-tighter bg-gradient-to-b from-black to-[#0068f1] text-transparent bg-clip-text">
+        {/* <h1 className="text-4xl font-bold text-center text-gray-900 mb-10 p-4 md:text-6xl tracking-tighter bg-gradient-to-b from-black to-[#ff9900] text-transparent bg-clip-text">
           Our Dental Services
-        </h1>
+        </h1> */}
+
+       {/* <div className="section-heading max-w-[850px] text-center mx-auto">
+          <h2 className="flex justify-center text-2xl md:text-5xl font-bold tracking-tighter bg-gradient-to-b from-orange-700 to-orange-600 text-transparent bg-clip-text">
+            Our Dental Services
+          </h2>
+        </div> */}
 
         <ServiceCard
           image={DentalMaterialImg}
@@ -159,27 +165,88 @@ export default function   DentalServicesSection() {
   );
 }
 
-const ServiceCard: React.FC<ServiceCardProps> = ({ image, title, description, services, buttonText, buttonLink,subtitle }) => {
+// const ServiceCard: React.FC<ServiceCardProps> = ({ image, title, description, services, buttonText, buttonLink,subtitle }) => {
+//   return (
+//     <div className="bg-white shadow-lg rounded-xl hover:border-2 hover:border-[#87CEEB] overflow-hidden flex flex-col md:flex-row mt-8 transition-transform transform hover:scale-105 duration-300">
+//       <div className="md:w-1/2 p-6 flex flex-col items-center bg-gradient-to-br from-white to-[#eaf6fd]">
+//         <Image src={image} alt={title} width={300} height={300} className="rounded-lg object-cover" />
+//         <h2 className="text-3xl font-semibold mt-4 text-[#004b87] text-center">{title}</h2>
+//         <p className="text-gray-700 mt-3 text-center leading-relaxed">{description}</p>
+//       </div>
+//       <div className="md:w-1/2 bg-[#eaf6fd] p-6 flex flex-col justify-center items-center">
+//         <h3 className="text-xl font-semibold text-gray-800 text-center mb-4"> {subtitle}</h3>
+//         <ul className="text-gray-700 text-md space-y-2 text-center w-full">
+//           {services.map((service, index) => (
+//             <li key={index} className="bg-white px-3 py-2 pl-[7rem] rounded-md shadow-sm flex items-center justify-left space-x-2">
+//               <span className="text-[#004b87] font-bold">✔</span>
+//               <span>{service}</span>
+//             </li>
+//           ))}
+//         </ul>
+//         <a
+//           href={buttonLink}
+//           className="mt-6 px-6 py-3 bg-[#004b87] text-white font-semibold rounded-lg shadow-md hover:bg-[#003366] transition duration-300"
+//         >
+//           {buttonText}
+//         </a>
+//       </div>
+//     </div>
+//   );
+// };
+
+const ServiceCard: React.FC<ServiceCardProps> = ({
+  image,
+  title,
+  description,
+  services,
+  buttonText,
+  buttonLink,
+  subtitle
+}) => {
   return (
-    <div className="bg-white shadow-lg rounded-xl hover:border-2 hover:border-[#87CEEB] overflow-hidden flex flex-col md:flex-row mt-8 transition-transform transform hover:scale-105 duration-300">
-      <div className="md:w-1/2 p-6 flex flex-col items-center bg-gradient-to-br from-white to-[#eaf6fd]">
-        <Image src={image} alt={title} width={300} height={300} className="rounded-lg object-cover" />
-        <h2 className="text-3xl font-semibold mt-4 text-[#004b87] text-center">{title}</h2>
-        <p className="text-gray-700 mt-3 text-center leading-relaxed">{description}</p>
+    <div className="bg-white border border-transparent shadow-md rounded-xl overflow-hidden flex flex-col md:flex-row mt-8 transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:border-[#ffca98]">
+      {/* Left Side */}
+      <div className="md:w-1/2 p-6 flex flex-col items-center from-white ">
+        <h2 className="text-2xl font-bold mt-4 text-orange-600 text-center">
+          {title}
+        </h2>
+        <Image
+          src={image}
+          alt={title}
+          width={300}
+          height={300}
+          className="rounded-lg mt-10 object-cover"
+        />
+        {/* <p className="text-gray-600 mt-3 text-center leading-relaxed">
+          {description}
+        </p> */}
       </div>
-      <div className="md:w-1/2 bg-[#eaf6fd] p-6 flex flex-col justify-center items-center">
-        <h3 className="text-xl font-semibold text-gray-800 text-center mb-4"> {subtitle}</h3>
-        <ul className="text-gray-700 text-md space-y-2 text-center w-full">
+
+      {/* Right Side */}
+      <div className="md:w-1/2 bg-white p-6 flex flex-col justify-center items-center">
+        <h3 className="text-sm text-gray-800 align-center mb-4">
+          <li
+              // key={index}
+              className="bg-white px-3 py-3 m-2 rounded-md shadow-sm flex items-center space-x-2"
+            >
+              {/* <span className="text-orange-600 font-bold">✔</span> */}
+              <span>{description}</span>
+            </li>
+        </h3>
+        {/* <ul className="text-gray-700 text-md space-y-2 w-full">
           {services.map((service, index) => (
-            <li key={index} className="bg-white px-3 py-2 pl-[7rem] rounded-md shadow-sm flex items-center justify-left space-x-2">
-              <span className="text-[#004b87] font-bold">✔</span>
+            <li
+              key={index}
+              className="bg-white px-3 py-2 pl-[7rem] rounded-md shadow-sm flex items-center space-x-2"
+            >
+              <span className="text-orange-600 font-bold">✔</span>
               <span>{service}</span>
             </li>
           ))}
-        </ul>
+        </ul> */}
         <a
           href={buttonLink}
-          className="mt-6 px-6 py-3 bg-[#004b87] text-white font-semibold rounded-lg shadow-md hover:bg-[#003366] transition duration-300"
+          className="mt-6 px-6 py-3 bg-orange-600 text-white font-semibold rounded-lg shadow-md hover:bg-orange-700 transition duration-300"
         >
           {buttonText}
         </a>
@@ -187,3 +254,4 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ image, title, description, se
     </div>
   );
 };
+

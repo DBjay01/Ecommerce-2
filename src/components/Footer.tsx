@@ -58,7 +58,7 @@ const Footer = () => {
               <Link href="/ContactUsPage">Order Help</Link>
               <Link href="/AboutUsPage">Refund Policy</Link>
               <Link href="/PrivacyPolicyPage">Privacy Policy</Link>
-              <Link href="/TermsPage">Terms & Conditions</Link>
+              <Link href="/GurOmDentalLabPage">Terms & Conditions</Link>
             </div>
           </div>
         </div>
@@ -99,6 +99,10 @@ const Footer = () => {
             <span className="text-gray-500 mr-4">Currency</span>
             <span className="font-medium">₹ Rupees</span>
           </div>
+          <Link href="/ContactUsPage">Order Help</Link>
+          <Link href="/AboutUsPage">Refund Policy</Link>
+          <Link href="/PrivacyPolicyPage">Privacy Policy</Link>
+          <Link href="/TermsPage">Terms & Conditions</Link>
         </div>
       </div>
     </div>

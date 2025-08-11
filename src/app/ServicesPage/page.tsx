@@ -5,12 +5,13 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import DentalClinicsImg from "@/assets/service-banner.png";
 import DentalServicesSection from "@/components/DentalServicesSection";
+import HomeServices from "@/components/HomeServices";
 
 const ServicesPage = () => {
   return (
     <div className="pt-24 md:pt-6">
 
-      <section className="pt-8 -mt-10 pb-20 bg-[radial-gradient(ellipse_200%100%_at_bottom_left,#87CEEB,_#FFFFFF_90%)] overflow-x-clip">
+      {/* <section className="pt-8 -mt-10 pb-20 bg-[radial-gradient(ellipse_200%100%_at_bottom_left,#87CEEB,_#FFFFFF_90%)] overflow-x-clip">
         <div className="container max-w-[1200px] mx-auto px-4">
           <div className="md:flex items-center">
             <div className="md:w-1/2">
@@ -34,7 +35,9 @@ const ServicesPage = () => {
           </div>
           
         </div>
-      </section>
+      </section> */}
+
+      <HomeServices/>
       <section id="services"><DentalServicesSection/></section>
 
     </div>

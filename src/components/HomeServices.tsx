@@ -13,13 +13,13 @@ const services = [
     title: "Dental Material Trading",
     image: DentalMaterialImg,
     description: "High-quality dental materials to keep your clinic and lab running smoothly",
-    pageurl: "/ServicesPage",
+    pageurl: "/GurOmDentalWorldPage",
   },
   {
     title: "Dental Lab",
     image: DentalLabImg,
     description: "Precision-crafted crowns, bridges, and dentures with cutting-edge CAD/CAM technology",
-    pageurl: "/ServicesPage",
+    pageurl: "/GurOmDentalLabPage",
   },
   {
     title: "Dental Clinics",
@@ -40,7 +40,7 @@ const HomeServices = () => {
     <section className="py-12 bg-white">
       <div className="max-w-[1200px] mx-auto px-4">
         <div className="section-heading max-w-[850px] text-center mx-auto">
-          <h2 className="section-title text-2xl font-bold text-[#1A3D5D]">Our Services</h2>
+          <h2 className="flex justify-center text-2xl md:text-3xl font-bold tracking-tighter bg-gradient-to-b from-orange-700 to-orange-600 text-transparent bg-clip-text">Our Services</h2>
         </div>
 
         {/* Grid Layout */}
@@ -50,7 +50,7 @@ const HomeServices = () => {
             {services.slice(0, 2).map(({ title, image, description, pageurl }) => (
               <Link href={pageurl} key={title}>
                 <div
-                  className="p-4 border bg-[##f5f9fa] rounded-xl shadow-md transition-all duration-300 ease-in-out hover:scale-105 flex flex-col items-center text-center hover:border-[#87CEEB] hover:shadow-lg"
+                  className="p-4 border bg-[##f5f9fa] rounded-xl shadow-md transition-all duration-300 ease-in-out hover:scale-105 flex flex-col items-center text-center hover:border-[#ffca98] hover:shadow-lg"
                 >
                   <Image src={image} alt={title} width={60} height={60} className="rounded-lg" />
                   <h3 className="text-lg font-bold text-orange-600 mt-2">{title}</h3>
@@ -70,7 +70,7 @@ const HomeServices = () => {
             {services.slice(2, 4).map(({ title, image, description, pageurl }) => (
               <Link href={pageurl} key={title}>
                 <div
-                  className="p-4 border bg-[#f5f9fa] rounded-xl shadow-md transition-all duration-300 ease-in-out hover:scale-105 flex flex-col items-center text-center hover:border-[#87CEEB] hover:shadow-lg"
+                  className="p-4 border bg-[##f5f9fa] rounded-xl shadow-md transition-all duration-300 ease-in-out hover:scale-105 flex flex-col items-center text-center hover:border-[#ffca98] hover:shadow-lg"
                 >
                   <Image src={image} alt={title} width={60} height={60} className="rounded-lg" />
                   <h3 className="text-lg font-bold text-orange-600 mt-2">{title}</h3>

@@ -85,7 +85,7 @@ const ListPage = async ({ searchParams }: { searchParams: any }) => {
 
       {/* Products */}
 
-      <h1 className="flex my-10 justify-center text-2xl md:text-4xl font-bold tracking-tighter bg-gradient-to-b from-black to-[#001E80] text-transparent bg-clip-text">{cat?.collection?.name} </h1>
+      {/* <h1 className="flex my-10 justify-center text-2xl md:text-4xl font-bold tracking-tighter bg-gradient-to-b from-orange-600 to-orange-500 text-transparent bg-clip-text">{cat?.collection?.name} </h1>
       <Suspense fallback={"loading"}>
         <ProductList
           categoryId={
@@ -93,7 +93,27 @@ const ListPage = async ({ searchParams }: { searchParams: any }) => {
           }
           searchParams={searchParams}
         />
+      </Suspense> */}
+
+      {/* Category title + Search bar */}
+      <div className="flex flex-col md:flex-row items-center justify-between my-10 gap-4">
+        <h1 className="text-2xl md:text-4xl font-bold tracking-tighter bg-gradient-to-b from-orange-600 to-orange-500 text-transparent bg-clip-text pb-2">
+          {cat?.collection?.name}
+        </h1>
+
+        {/* Search bar beside category title */}
+        <div className="w-full md:w-1/3">
+          <SearchBar />
+        </div>
+      </div>
+
+      <Suspense fallback={"loading"}>
+        <ProductList
+          categoryId={cat.collection?._id || "00000000-000000-000000-000000000001"}
+          searchParams={searchParams}
+        />
       </Suspense>
+
     </div>
   );
 };
