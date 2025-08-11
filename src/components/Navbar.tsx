@@ -75,7 +75,7 @@ const Navbar = () => {
             <SearchBar />
           </div>
 
-          {/* RIGHT: Navigation Icons */}
+          {/* RIGHT: Navigation Icons  are good*/}
           <div className="flex items-center gap-6">
             <NavIcons />
           </div>
