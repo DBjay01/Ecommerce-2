@@ -25,13 +25,13 @@ const services = [
     title: "Dental Clinics",
     image: DentalClinicsImg,
     description: "Advanced care with the latest technology for healthy, beautiful smiles",
-    pageurl: "/ServicesPage",
+    pageurl: "/GurOmDentalClinicsPage",
   },
   {
     title: "Dental Equipment Manufacturing",
     image: DentalEquipmentImg,
     description: "Innovative and reliable dental equipment to enhance patient care",
-    pageurl: "/ServicesPage",
+    pageurl: "/GurOmDenteczPage",
   },
 ];
 

@@ -184,12 +184,12 @@ const Navbar = () => {
       {open && (
         <div className="absolute left-0 top-full mt-2 w-48 bg-white rounded-lg shadow-lg border border-blue-200 overflow-hidden z-50">
           {[
-            { href: "/list?cat=general-dentistry", label: "General Dentistry" },
-            { href: "/list?cat=endo", label: "Endodontics" },
+            { href: "/list?cat=general-dentistry", label: "General Dentistry w" },
+            { href: "/list?cat=endo", label: "Endodontics w" },
             { href: "/list?cat=periodontics", label: "Periodontics" },
             { href: "/list?cat=oral", label: "Oral Surgery" },
-            { href: "/list?cat=orthodontic-instruments", label: "Orthodontics" },
-            { href: "/list?cat=prostho", label: "Prosthodontics" },
+            { href: "/list?cat=orthodontic-instruments", label: "Orthodontics w" },
+            { href: "/list?cat=prostho", label: "Prosthodontics w" },
             { href: "/list?cat=pedodontics", label: "Pedodontics" },
           ].map((item) => (
             <Link
@@ -203,7 +203,9 @@ const Navbar = () => {
           ))}
         </div>
       )}
-    </div>
+          </div>
+          
+          
 
           {/* Categories Dropdown */}
           {/* <div className="relative group">

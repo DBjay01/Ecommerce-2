@@ -16,7 +16,7 @@ const AboutUsPage = () => {
       {/* About Section */}
       <section
         ref={aboutRef}
-        className="relative pt-24 md:pt-16 pb-24 bg-gradient-to-b from-white to-[#87CEEB] overflow-hidden"
+        className="relative pt-24 md:pt-16 pb-24 bg-gradient-to-b from-white to-orange-100 overflow-hidden"
       >
         <div className="container -mt-8 mx-auto px-6 lg:px-16">
           <div className="md:flex items-center justify-end">
@@ -35,7 +35,7 @@ const AboutUsPage = () => {
               {/* CTA BUTTONS */}
               <div className="flex gap-4 mt-6">
                 <Link href="/ServicesPage">
-                  <button className="px-6 py-3 text-lg font-semibold text-white bg-blue-600 rounded-lg shadow-md hover:bg-blue-700 transition duration-300">
+                  <button className="px-6 py-3 text-lg font-semibold text-white bg-orange-500 rounded-lg shadow-md hover:bg-orange-600 transition duration-300">
                     Learn More About Our Services
                   </button>
                 </Link>
@@ -74,7 +74,7 @@ const AboutUsPage = () => {
               transition={{ duration: 1 }}
               className="bg-white p-8 shadow-xl rounded-lg"
             >
-              <h2 className="text-4xl font-bold text-blue-600">Our Vision</h2>
+              <h2 className="text-4xl font-bold text-orange-600">Our Vision</h2>
               <p className="text-lg text-gray-700 mt-4">
                 Shaping the Future of Dentistry — With Quality, Care, and Innovation.
               </p>
@@ -87,7 +87,7 @@ const AboutUsPage = () => {
               transition={{ duration: 1, delay: 0.3 }}
               className="bg-white p-8 shadow-xl rounded-lg"
             >
-              <h2 className="text-4xl font-bold text-blue-600">Our Mission</h2>
+              <h2 className="text-4xl font-bold text-orange-600">Our Mission</h2>
               <p className="text-lg text-gray-700 mt-4">
                 What began as a modest operation has grown into one of the leading dental product outsourcing hubs across the state — driven by quality, trust, and commitment.
               </p>
@@ -120,7 +120,7 @@ const AboutUsPage = () => {
                   transition={{ duration: 1, delay: index * 0.3 }}
                   className="group bg-white p-6 sm:p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-2xl transition duration-300"
                 >
-                  <h3 className="text-xl sm:text-2xl font-semibold text-blue-700 group-hover:text-blue-900">
+                  <h3 className="text-xl sm:text-2xl font-semibold text-orange-600 group-hover:text-orange-800">
                     {role}
                   </h3>
                   <p className="text-gray-600 mt-3 sm:mt-4">
@@ -134,31 +134,8 @@ const AboutUsPage = () => {
         </div>
       </section>
 
-
-      {/* <section className="py-24 bg-blue-500 text-white text-center">
-                <div className="container mx-auto px-6 lg:px-16">
-                    <h2 className="text-4xl font-bold">Get in Touch</h2>
-                    <p className="text-lg mt-4 max-w-2xl mx-auto">
-                        Have questions? Want to collaborate? Reach out to us and let's build the future of dental care together.
-                    </p>
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 1, delay: 0.3 }}
-                        className="mt-6"
-                    >
-                        <Link href="/contact">
-                            <button className="px-8 py-3 text-lg font-semibold bg-white text-blue-600 rounded-full shadow-md hover:bg-gray-100 transition duration-300">
-                                Contact Us
-                            </button>
-                        </Link>
-                    </motion.div>
-                </div>
-            </section> */}
-
       {/* Company Details and Location */}
-{/* Company Details and Location */}
-<section className="py-8 px-12 md:py-16 bg-white">
+      <section className="py-8 px-12 md:py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="md:flex items-start">
             {/* Company Details */}
@@ -178,7 +155,7 @@ const AboutUsPage = () => {
                 Email:{" "}
                 <a
                   href="mailto:sketchitup.official@gmail.com"
-                  className="text-blue-500"
+                  className="text-orange-500"
                 >
                   shopsdental@gmail.com
                 </a>
@@ -206,7 +183,6 @@ const AboutUsPage = () => {
           </div>
         </div>
       </section>
-
     </div>
   );
 };
